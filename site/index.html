@@ -8,20 +8,20 @@
 <meta name="theme-color" content="#FFFDF8">
 <meta property="og:title" content="Kukmara O‘zbekiston">
 <meta property="og:description" content="Avloddan avlodga o‘tadigan idishlar. Rasmiy distribyutor.">
-<meta property="og:image" content="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_hero.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/hs_1_nabor.jpg">
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_favicon.png">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://raw.githubusercontent.com">
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FFFDF8; --cream:#FAF3E6; --ink:#3A2F24; --muted:#7A6B5B; --red:#E1001A; --red-h:#B80015; --line:#ECDFC8;
-  --serif:'Prata', Georgia, 'Times New Roman', serif;
-  --sans:'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --serif:'Lora', Georgia, 'Times New Roman', serif;
+  --sans:'Golos Text', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --wrap:1240px; --pad:clamp(20px, 5vw, 56px);
-  --hdr:68px;
+  --hdr:72px; --hp:clamp(10px,1.4vw,18px);
 }
 *{box-sizing:border-box;}
 html{-webkit-text-size-adjust:100%; scroll-padding-top:calc(var(--hdr) + env(safe-area-inset-top, 0px));}
@@ -31,7 +31,7 @@ a{color:inherit;}
 button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer;}
 :focus-visible{outline:2px solid var(--red); outline-offset:3px; border-radius:6px;}
 .wrap{max-width:var(--wrap); margin:0 auto; padding:0 var(--pad);}
-h1,h2,h3{font-family:var(--serif); font-weight:400; margin:0; letter-spacing:-0.01em;}
+h1,h2,h3{font-family:var(--serif); font-weight:400; margin:0; letter-spacing:-0.02em;}
 h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .lead{color:var(--muted); max-width:34em; margin:14px 0 0; font-size:clamp(16px,1.4vw,18px);}
 .sec{padding:clamp(80px, 11vw, 150px) 0 0;}
@@ -52,7 +52,8 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .hdr.solid{background:rgba(255,253,248,.82); -webkit-backdrop-filter:saturate(1.4) blur(16px); backdrop-filter:saturate(1.4) blur(16px); box-shadow:0 1px 0 var(--line);}
 .hdr-in{height:var(--hdr); display:flex; align-items:center; gap:28px;}
 .logo{display:block; flex:none;}
-.logo img{height:22px; width:auto;}
+.logo img{height:38px; width:auto;}
+@media (max-width:700px){ .logo img{height:32px;} }
 .nav{display:flex; gap:26px; margin:0 auto; font-size:15px;}
 .nav a{text-decoration:none; color:var(--muted); padding:6px 0; position:relative; transition:color .2s;}
 .nav a:hover, .nav a.on{color:var(--ink);}
@@ -84,28 +85,29 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .menu .lang button{padding:10px 12px;}
 
 /* hero */
-.hero{height:190vh; position:relative;}
-.hero-stick{position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; --p:0;}
-.hero-text{position:absolute; left:0; right:0; top:calc(var(--hdr) + env(safe-area-inset-top,0px) + 4vh); text-align:center; padding:0 var(--pad); opacity:calc(1 - var(--p) * 2.4); transform:translateY(calc(var(--p) * -60px));}
-.hero h1{font-size:clamp(40px, 6.4vw, 92px); line-height:1.02; max-width:12em; margin:0 auto;}
-.hero-sub{color:var(--muted); margin:18px auto 0; max-width:30em; font-size:clamp(16px,1.5vw,19px);}
-.hero-cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
-.hero-media{position:absolute; inset:0; --t:calc(1 - var(--p));
-  clip-path:inset(calc(var(--t) * var(--top)) calc(var(--t) * var(--side)) calc(var(--t) * 3.5vh) calc(var(--t) * var(--side)) round calc(var(--t) * 28px));
-  --top:47vh; --side:var(--pad);}
-.hero-text{z-index:2;}
-.hero-media img{width:100%; height:100%; object-fit:cover; transform:scale(calc(1.12 - var(--p) * 0.12)); transform-origin:50% 70%;}
-.hero-cap{position:absolute; left:var(--pad); bottom:calc(env(safe-area-inset-bottom,0px) + 34px); color:#fff; font-family:var(--serif); font-size:clamp(22px,2.6vw,34px); line-height:1.15; max-width:14em; text-shadow:0 2px 24px rgba(0,0,0,.35); opacity:calc((var(--p) - .7) * 3.3);}
-.hero-cap small{display:block; font-family:var(--sans); font-size:14px; margin-top:8px; opacity:.85;}
-@media (max-width:700px){
-  .hero-media{--top:56vh;}
-  .hero-sub{display:none;}
-}
-@media (max-height:620px) and (max-width:700px){ .hero-media{--top:62vh;} }
-@media (prefers-reduced-motion:reduce){
-  .hero{height:auto;} .hero-stick{position:relative;}
-  .hero-text{opacity:1; transform:none;} .hero-media img{transform:none;} .hero-cap{opacity:0;}
-}
+.hero{padding:calc(var(--hdr) + env(safe-area-inset-top,0px)) var(--hp) 0;}
+.hero-card{position:relative; height:calc(100vh - var(--hdr) - var(--hp)); height:calc(100svh - var(--hdr) - env(safe-area-inset-top,0px) - var(--hp)); min-height:440px; max-height:980px; border-radius:24px; overflow:hidden; background:#2a221b; isolation:isolate;}
+.slide{position:absolute; inset:0; opacity:0; transition:opacity 1.6s ease;}
+.slide.on{opacity:1; z-index:1;}
+.slide img{width:100%; height:100%; object-fit:cover; transform:scale(1.001); transition:transform 8s linear;}
+.slide.on img{transform:scale(1.07);}
+.hero-card::after{content:""; position:absolute; inset:auto 0 0 0; height:46%; z-index:2; background:linear-gradient(to top, rgba(28,20,12,.55), rgba(28,20,12,0)); pointer-events:none;}
+.hero-foot{position:absolute; z-index:3; left:clamp(20px,3vw,44px); right:clamp(20px,3vw,44px); bottom:clamp(44px,6vh,64px); display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; color:#fff;}
+.hero-cap{text-decoration:none; display:block; min-height:2.4em;}
+.hero-cap b{display:block; font-family:var(--serif); font-weight:400; font-size:clamp(34px,4.4vw,60px); line-height:1.05; letter-spacing:-0.02em;}
+.hero-cap span{display:inline-block; margin-top:10px; font-size:15px; border-bottom:1px solid rgba(255,255,255,.5); padding-bottom:2px;}
+.hero-cta{display:flex; gap:10px; flex-wrap:wrap;}
+.btn-white{background:#fff; color:var(--ink);} .btn-white:hover{background:var(--cream);}
+.btn-ghost{border:1px solid rgba(255,255,255,.6); color:#fff;} .btn-ghost:hover{background:rgba(255,255,255,.12);}
+.hero-bar{position:absolute; z-index:3; left:clamp(20px,3vw,44px); right:clamp(20px,3vw,44px); bottom:clamp(18px,2.6vh,26px); display:flex; gap:6px;}
+.hero-bar button{flex:1; height:20px; display:flex; align-items:center;}
+.hero-bar button i{display:block; width:100%; height:2px; background:rgba(255,255,255,.35); border-radius:1px; overflow:hidden;}
+.hero-bar button i::after{content:""; display:block; height:100%; width:0; background:#fff;}
+.hero-bar button.done i::after{width:100%;}
+.hero-bar button.on i::after{animation:hfill var(--dur,6.5s) linear forwards;}
+@keyframes hfill{from{width:0} to{width:100%}}
+@media (max-width:700px){ .hero-bar{right:88px;} .hero-card{border-radius:18px;} .hero-cta .btn-ghost{display:none;} .hero-foot{align-items:flex-start; flex-direction:column;} }
+@media (prefers-reduced-motion:reduce){ .slide img, .slide.on img{transform:none; transition:none;} .slide{transition:none;} .hero-bar button.on i::after{animation:none; width:100%;} }
 
 /* collections rail */
 .rail{--edge:max(var(--pad), calc((100vw - var(--wrap)) / 2 + var(--pad))); display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px var(--edge) 18px; scrollbar-width:none; scroll-padding:0 var(--edge);}
@@ -249,13 +251,10 @@ body.route-catalog #catalogPage{display:block;}
 .search .clr{position:absolute; right:6px; top:50%; transform:translateY(-50%); width:40px; height:40px; display:none; place-items:center; border-radius:50%;}
 .search .clr.show{display:grid;}
 .search .clr svg{width:18px; height:18px;}
-.cat-body{display:grid; grid-template-columns:240px 1fr; gap:48px; padding-bottom:20px;}
-.tree{position:sticky; top:calc(var(--hdr) + 24px); align-self:start; font-size:15px; max-height:calc(100vh - var(--hdr) - 48px); overflow:auto;}
-.tree a{display:block; padding:8px 12px; border-radius:10px; text-decoration:none; color:var(--muted); line-height:1.35;}
-.tree a:hover{color:var(--ink);}
-.tree a.on{color:var(--ink); background:var(--cream); font-weight:500;}
-.tree .sub a{padding-left:26px; font-size:14px;}
-@media (max-width:900px){ .cat-body{grid-template-columns:1fr;} .tree{display:none;} }
+.cat-body{padding-bottom:20px;}
+.back{display:inline-flex; align-items:center; gap:6px; font-size:15px; color:var(--muted); text-decoration:none; margin-bottom:12px; min-height:36px;}
+.back svg{width:18px; height:18px;}
+.back:hover{color:var(--ink);}
 .info-box{background:var(--cream); border-radius:18px; padding:22px 24px; margin-bottom:28px;}
 .info-box summary{cursor:pointer; font-weight:500; list-style:none; display:flex; justify-content:space-between; align-items:center; min-height:24px;}
 .info-box summary::-webkit-details-marker{display:none;}
@@ -265,14 +264,15 @@ body.route-catalog #catalogPage{display:block;}
 .info-box ul{margin:14px 0 0; padding-left:20px; columns:2; column-gap:32px; font-size:15px;}
 .info-box li{margin-bottom:6px; break-inside:avoid;}
 @media (max-width:700px){ .info-box ul{columns:1;} }
-.tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
-.tile{display:block; text-decoration:none;}
-.tile .ph{aspect-ratio:4/3; border-radius:18px; overflow:hidden; background:var(--cream);}
-.tile img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
-.tile:hover img{transform:scale(1.03);}
-.tile h3{font-family:var(--sans); font-weight:500; font-size:17px; margin-top:12px; letter-spacing:0; line-height:1.3;}
-.tile p{margin:2px 0 0; font-size:14px; color:var(--muted);}
-@media (max-width:900px){ .tiles{grid-template-columns:repeat(2,1fr); gap:12px;} }
+.tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(14px,1.8vw,24px);}
+.tile{display:block; text-decoration:none; position:relative; border-radius:20px; overflow:hidden; background:var(--cream); aspect-ratio:4/3;}
+.tile img{width:100%; height:100%; object-fit:cover; transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+.tile:hover img{transform:scale(1.04);}
+.tile .lbl{position:absolute; left:0; right:0; bottom:0; padding:60px 22px 20px; color:#fff; background:linear-gradient(to top, rgba(28,20,12,.62), rgba(28,20,12,0));}
+.tile h3{font-family:var(--serif); font-size:clamp(22px,2vw,28px); line-height:1.15;}
+.tile p{margin:4px 0 0; font-size:14px; opacity:.85;}
+@media (max-width:900px){ .tiles{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .tiles{grid-template-columns:1fr; gap:12px;} .tile{aspect-ratio:16/10;} }
 .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
 @media (max-width:1100px){ .grid{grid-template-columns:repeat(3,1fr);} }
 @media (max-width:700px){ .grid{grid-template-columns:repeat(2,1fr); gap:10px;} }
@@ -365,7 +365,7 @@ body.route-catalog #catalogPage{display:block;}
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr-in">
-    <a class="logo" href="#/" aria-label="Kukmara"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_wordmark.png" alt="Kukmara" width="155" height="22"></a>
+    <a class="logo" href="#/" aria-label="Kukmara"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="142" height="38"></a>
     <nav class="nav" id="nav"></nav>
     <div class="tools">
       <button class="icon-btn" data-act="search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
@@ -378,7 +378,7 @@ body.route-catalog #catalogPage{display:block;}
 
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu-top">
-    <a class="logo" href="#/"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_wordmark.png" alt="Kukmara" width="155" height="22"></a>
+    <a class="logo" href="#/"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="142" height="38"></a>
     <button class="icon-btn" data-act="menu-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <nav id="mnav"></nav>
@@ -448,11 +448,11 @@ uz:{
   search:'Nom yoki artikul bo‘yicha qidirish', found:function(n){ return n + ' ta natija'; }, nothing:'Hech narsa topilmadi. Artikulni yoki boshqa so‘zni kiriting.',
   showMore:'Yana ko‘rsatish', about:'Kolleksiya haqida',
   article:'Artikul', collection:'Bo‘lim',
-  addList:'Ro‘yxatga qo‘shish', inList:'Ro‘yxatda', askPrice:'Narxni so‘rash', specs:'Xususiyatlari', related:'Shu bo‘limdan',
-  listTitle:'So‘rov ro‘yxati', listEmpty:'Ro‘yxat bo‘sh', listEmptyS:'Katalogdan mahsulot tanlang — narxini menejer aytadi.',
+  addList:'Savatga qo‘shish', inList:'Savatda', view:'Ko‘rish', askPrice:'Narxni so‘rash', specs:'Xususiyatlari', related:'Shu bo‘limdan',
+  listTitle:'Savat', listEmpty:'Savat bo‘sh', listEmptyS:'Katalogdan mahsulot tanlang — narxini menejer aytadi.',
   listNote:'Narxlar saytda ko‘rsatilmaydi. So‘rov yuboring — menejer narx va mavjudlik bilan qo‘ng‘iroq qiladi.',
   sendRequest:'So‘rov yuborish', sendTg:'Telegram orqali yuborish', remove:'Olib tashlash',
-  copied:'Matn nusxalandi — Telegram chatiga joylab yuboring', added:'Ro‘yxatga qo‘shildi',
+  copied:'Matn nusxalandi — Telegram chatiga joylab yuboring', added:'Savatga qo‘shildi',
   askText:'Assalomu alaykum! Ushbu mahsulot narxini bilmoqchi edim:', listText:'Assalomu alaykum! Quyidagi mahsulotlar narxini bilmoqchi edim:',
   pcs:'dona', close:'Yopish',
   rights:'Kukmara mahsulotlarining O‘zbekistondagi rasmiy distribyutori.',
@@ -488,11 +488,11 @@ ru:{
   search:'Поиск по названию или артикулу', found:function(n){ return 'Найдено: ' + n; }, nothing:'Ничего не найдено. Попробуйте артикул или другое слово.',
   showMore:'Показать ещё', about:'О коллекции',
   article:'Артикул', collection:'Раздел',
-  addList:'Добавить в список', inList:'В списке', askPrice:'Узнать цену', specs:'Характеристики', related:'Из этого раздела',
-  listTitle:'Список запроса', listEmpty:'Список пуст', listEmptyS:'Выберите товары в каталоге — цену сообщит менеджер.',
+  addList:'В корзину', inList:'В корзине', view:'Смотреть', askPrice:'Узнать цену', specs:'Характеристики', related:'Из этого раздела',
+  listTitle:'Корзина', listEmpty:'Корзина пуста', listEmptyS:'Выберите товары в каталоге — цену сообщит менеджер.',
   listNote:'Цены на сайте не указаны. Отправьте запрос — менеджер перезвонит с ценой и наличием.',
   sendRequest:'Отправить запрос', sendTg:'Отправить в Telegram', remove:'Убрать',
-  copied:'Текст скопирован — вставьте его в чат Telegram', added:'Добавлено в список',
+  copied:'Текст скопирован — вставьте его в чат Telegram', added:'Добавлено в корзину',
   askText:'Здравствуйте! Хочу узнать цену на товар:', listText:'Здравствуйте! Хочу узнать цены на товары:',
   pcs:'шт.', close:'Закрыть',
   rights:'Официальный дистрибьютор продукции Kukmara в Узбекистане.',
@@ -528,11 +528,11 @@ en:{
   search:'Search by name or article', found:function(n){ return n + ' results'; }, nothing:'Nothing found. Try an article number or another word.',
   showMore:'Show more', about:'About the collection',
   article:'Article', collection:'Section',
-  addList:'Add to list', inList:'In your list', askPrice:'Ask for price', specs:'Features', related:'From this section',
-  listTitle:'Request list', listEmpty:'Your list is empty', listEmptyS:'Pick products in the catalogue — a manager will tell you the price.',
+  addList:'Add to cart', inList:'In your cart', view:'View', askPrice:'Ask for price', specs:'Features', related:'From this section',
+  listTitle:'Cart', listEmpty:'Your cart is empty', listEmptyS:'Pick products in the catalogue — a manager will tell you the price.',
   listNote:'Prices aren’t shown on the site. Send a request and a manager will call with price and availability.',
   sendRequest:'Send request', sendTg:'Send via Telegram', remove:'Remove',
-  copied:'Text copied — paste it into the Telegram chat', added:'Added to list',
+  copied:'Text copied — paste it into the Telegram chat', added:'Added to cart',
   askText:'Hello! I’d like to know the price of:', listText:'Hello! I’d like to know prices for:',
   pcs:'pcs', close:'Close',
   rights:'Official distributor of Kukmara products in Uzbekistan.',
@@ -614,12 +614,38 @@ function updateBadge(){ var n = list.reduce(function(a,b){ return a + b.qty; }, 
 /* ---------- home ---------- */
 function fmtDate(d){ var x = new Date(d + 'T00:00:00'); if(isNaN(x)) return esc(d); var m = t('months')[x.getMonth()]; return lang==='en' ? m + ' ' + x.getDate() + ', ' + x.getFullYear() : x.getDate() + ' ' + m + ' ' + x.getFullYear(); }
 
+var SLIDES = [
+  {img:'hs_1_nabor.jpg', path:'0.1.7', pos:'50% 55%'},
+  {img:'hs_2_granit.jpg', path:'0.0.3', pos:'50% 60%'},
+  {img:'hs_3_kazan.jpg', path:'0.1.0', pos:'50% 60%'},
+  {img:'hs_4_trendy.jpg', path:'0.2.0', pos:'50% 60%'},
+  {img:'hs_5_skovoroda.jpg', path:'0.1.1', pos:'45% 60%'},
+  {img:'hs_6_blinnitsa.jpg', path:'0.1.2', pos:'40% 55%'}
+];
+var heroIdx = 0, heroTimer = null, HERO_MS = 6500;
+function heroCapHtml(i){
+  var ch = CAT ? chain(SLIDES[i].path) : [];
+  if(ch.length < 3 || !ch[2].n) return '';
+  return '<b>'+esc(nm(ch[1].n))+'</b><span>'+esc(nm(ch[2].n))+'</span>';
+}
+function heroGo(i){
+  var card = document.getElementById('heroCard'); if(!card) return;
+  heroIdx = (i + SLIDES.length) % SLIDES.length;
+  card.querySelectorAll('.slide').forEach(function(s, k){ s.classList.toggle('on', k === heroIdx); if(k === heroIdx){ var im = s.querySelector('img'); im.loading = 'eager'; } });
+  card.querySelectorAll('.hero-bar button').forEach(function(b, k){ b.classList.remove('on'); b.classList.toggle('done', k < heroIdx); void b.offsetWidth; if(k === heroIdx) b.classList.add('on'); });
+  var cap = document.getElementById('heroCap'); cap.href = '#/catalog/' + SLIDES[heroIdx].path; cap.innerHTML = heroCapHtml(heroIdx);
+  var nx = card.querySelectorAll('.slide img')[(heroIdx + 1) % SLIDES.length]; if(nx) nx.loading = 'eager';
+  heroStart();
+}
+function heroStart(){ clearTimeout(heroTimer); if(reduce) return; heroTimer = setTimeout(function(){ if(!document.hidden && lastView !== 'catalog') heroGo(heroIdx + 1); else heroStart(); }, HERO_MS); }
+
 function renderHome(){
   var h = '';
-  h += '<section class="hero" id="top"><div class="hero-stick" id="heroStick">' +
-    '<div class="hero-media"><img src="'+IMG('site_hero.jpg')+'" alt="" fetchpriority="high"><div class="hero-cap">'+esc(t('heroCap'))+'<small>'+esc(t('heroCapS'))+'</small></div></div>' +
-    '<div class="hero-text"><h1>'+esc(t('heroTitle'))+'</h1><p class="hero-sub">'+esc(t('heroSub'))+'</p>' +
-    '<div class="hero-cta"><a class="btn btn-red" href="#/catalog">'+esc(t('openCatalog'))+'</a><a class="btn btn-line" href="#/s/where">'+esc(t('whereBuy'))+'</a></div></div>' +
+  h += '<section class="hero" id="top"><div class="hero-card" id="heroCard">' +
+    SLIDES.map(function(sl, i){ return '<div class="slide'+(i===heroIdx?' on':'')+'"><img src="'+IMG(sl.img)+'" alt="" style="object-position:'+sl.pos+'"'+(i===0?' fetchpriority="high"':' loading="lazy"')+'></div>'; }).join('') +
+    '<div class="hero-foot"><a class="hero-cap" id="heroCap" href="#/catalog/'+SLIDES[heroIdx].path+'">'+heroCapHtml(heroIdx)+'</a>' +
+    '<div class="hero-cta"><a class="btn btn-white" href="#/catalog">'+esc(t('openCatalog'))+'</a><a class="btn btn-ghost" href="#/s/where">'+esc(t('whereBuy'))+'</a></div></div>' +
+    '<div class="hero-bar">' + SLIDES.map(function(sl, i){ return '<button data-slide="'+i+'" aria-label="'+(i+1)+'" class="'+(i===heroIdx?'on':(i<heroIdx?'done':''))+'"><i></i></button>'; }).join('') + '</div>' +
     '</div></section>';
 
   // collections
@@ -676,7 +702,7 @@ function renderHome(){
 
   document.getElementById('homePage').innerHTML = h;
   renderStores(null);
-  observeReveal(); bindRail(); onScroll();
+  observeReveal(); bindRail(); onScroll(); heroGo(heroIdx);
 }
 function contactForm(){
   return '<form class="form" id="cform" novalidate><input type="text" name="bot-field" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">' +
@@ -714,15 +740,11 @@ function renderCatalog(path, q){
   var n = node(curPath), ch = curPath ? chain(curPath) : [];
   var crumbs = '<nav class="crumbs" aria-label="breadcrumbs"><a href="#/">Kukmara</a><span class="sep">/</span><a href="#/catalog">'+esc(t('catalog'))+'</a>' +
     ch.slice(0, -1).map(function(c){ return '<span class="sep">/</span><a href="#/catalog/'+c.path+'">'+esc(nm(c.n))+'</a>'; }).join('') + '</nav>';
-  var top = curPath ? curPath.split('.')[0] : null;
-  var tree = (CAT||[]).map(function(c, i){
-    var s = '<a href="#/catalog/'+i+'" class="'+(curPath===String(i)?'on':'')+'">'+esc(nm(c))+'</a>';
-    if(String(i) === top && kids(c).length){ s += '<div class="sub">' + kids(c).map(function(k, j){ var p = i+'.'+j; return '<a href="#/catalog/'+p+'" class="'+(curPath===p||curPath.indexOf(p+'.')===0?'on':'')+'">'+esc(nm(k))+'</a>'; }).join('') + '</div>'; }
-    return s;
-  }).join('');
-  var html = '<div class="wrap"><div class="cat-head">'+crumbs+'<h1>'+esc(n ? nm(n) : t('catalog'))+'</h1>' +
+  var parent = ch.length > 1 ? '#/catalog/' + ch[ch.length-2].path : (curPath ? '#/catalog' : '#/');
+  var back = '<a class="back" href="'+parent+'">'+I.arrowL+esc(ch.length > 1 ? nm(ch[ch.length-2].n) : (curPath ? t('catalog') : 'Kukmara'))+'</a>';
+  var html = '<div class="wrap"><div class="cat-head">'+(curPath ? back : crumbs)+'<h1>'+esc(n ? nm(n) : t('catalog'))+'</h1>' +
     '<div class="search">'+I.search+'<input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="'+esc(t('search'))+'" value="'+esc(curQ)+'"><button class="clr'+(curQ?' show':'')+'" id="qclr" aria-label="Clear">'+I.x+'</button></div></div>' +
-    '<div class="cat-body"><aside class="tree">'+tree+'</aside><div id="cres"></div></div></div>';
+    '<div class="cat-body"><div id="cres"></div></div></div>';
   document.getElementById('catalogPage').innerHTML = html;
   renderResults();
   document.title = (n ? nm(n) + ' — ' : '') + 'Kukmara ' + t('catalog');
@@ -751,7 +773,7 @@ function renderResults(){
       var inf = n.info && (n.info[lang==='en'?'ru':lang] || n.info.ru);
       if(inf && (inf.desc || (inf.specs && inf.specs.length))) h += '<details class="info-box"><summary>'+esc(t('about'))+I.down+'</summary>'+(inf.desc?'<p>'+esc(lang==='uz'?uzfix(inf.desc):inf.desc)+'</p>':'')+(inf.specs?'<ul>'+inf.specs.map(function(s){ return '<li>'+esc(lang==='uz'?uzfix(s):s)+'</li>'; }).join('')+'</ul>':'')+'</details>';
     }
-    if(children.length) h += '<div class="tiles">' + children.map(function(k, i){ var p = (curPath ? curPath + '.' : '') + i; return '<a class="tile" href="#/catalog/'+p+'"><div class="ph"><img loading="lazy" src="'+esc(nodeImg(k))+'" alt=""></div><h3>'+esc(nm(k))+'</h3><p>'+esc(t('items')(count(k)))+'</p></a>'; }).join('') + '</div>';
+    if(children.length) h += '<div class="tiles">' + children.map(function(k, i){ var p = (curPath ? curPath + '.' : '') + i; return '<a class="tile" href="#/catalog/'+p+'"><img loading="lazy" src="'+esc(nodeImg(k))+'" alt=""><div class="lbl"><h3>'+esc(nm(k))+'</h3><p>'+esc(t('items')(count(k)))+'</p></div></a>'; }).join('') + '</div>';
     if(n && n.skus && n.skus.length){
       var ps = PRODUCTS.filter(function(p){ return p.path === curPath; });
       h += (children.length ? '<div style="height:40px"></div>' : '') + '<p class="count">'+esc(t('items')(ps.length))+'</p><div class="grid">' + ps.slice(0, shownN).map(prodCard).join('') + '</div>' + (ps.length > shownN ? '<div class="more"><button class="btn btn-line" data-more>'+esc(t('showMore'))+'</button></div>' : '');
@@ -853,13 +875,6 @@ function onScroll(){
     ticking = false;
     var y = window.scrollY, onHome = !document.body.classList.contains('route-catalog');
     document.getElementById('hdr').classList.toggle('solid', y > 8 || !onHome);
-    var st = document.getElementById('heroStick');
-    if(onHome && st && !st._top){ var tx = st.querySelector('.hero-text'); st.querySelector('.hero-media').style.setProperty('--top', Math.min(window.innerHeight*.7, tx.offsetTop + tx.offsetHeight + Math.max(20, window.innerHeight*.03)) + 'px'); st._top = 1; }
-    if(onHome && st && !reduce){
-      var hero = st.parentNode, max = hero.offsetHeight - window.innerHeight;
-      var p = Math.min(1, Math.max(0, y / (max * .85)));
-      st.style.setProperty('--p', p.toFixed(4));
-    }
     if(onHome){
       var cur = '';
       ['collections','company','news','where','contacts'].forEach(function(id){ var e = document.getElementById(id); if(e && e.getBoundingClientRect().top < window.innerHeight * .4) cur = id; });
@@ -893,7 +908,7 @@ function route(){
   }
   var wasCat = lastView === 'catalog';
   showView('home'); lastCatKey = null;
-  document.title = 'Kukmara O‘zbekiston — ' + t('heroTitle').toLowerCase();
+  document.title = 'Kukmara O‘zbekiston';
   if((m = h.match(/^#\/s\/(\w+)$/))){
     var target = document.getElementById(m[1]);
     if(target) setTimeout(function(){ target.scrollIntoView({behavior: (reduce||wasCat) ? 'auto' : 'smooth', block:'start'}); }, wasCat ? 30 : 0);
@@ -919,6 +934,7 @@ document.addEventListener('click', function(e){
   if(a.hasAttribute('data-q')){ var it = list.filter(function(x){ return x.id === a.getAttribute('data-q'); })[0]; if(it){ it.qty = Math.max(1, it.qty + (+a.getAttribute('data-d'))); saveList(); renderList(); } return; }
   if(a.hasAttribute('data-rm')){ list = list.filter(function(x){ return x.id !== a.getAttribute('data-rm'); }); saveList(); renderList(); return; }
   if(a.hasAttribute('data-listtg')){ copyAndOpenTg(listText()); return; }
+  if(a.hasAttribute('data-slide')){ heroGo(+a.getAttribute('data-slide')); return; }
   if(a.hasAttribute('data-more')){ shownN += PAGE; renderResults(); return; }
   if(a.hasAttribute('data-city')){ renderStores(a.getAttribute('data-city') || null); return; }
   if(a.hasAttribute('data-store')){ var s = CONTENT.stores[+a.getAttribute('data-store')]; document.querySelectorAll('.store').forEach(function(x){ x.classList.toggle('on', x === a); }); setMap(s); return; }
@@ -938,7 +954,7 @@ document.addEventListener('submit', function(e){
   if(e.target.id === 'lform'){ handleForm(e.target, 'sorov', {royxat: listText()}, function(){ list = []; saveList(); document.getElementById('rl').innerHTML = '<div class="sheet-top"><h2>'+esc(t('listTitle'))+'</h2><button class="icon-btn" data-close>'+I.x+'</button></div><div class="form-ok">'+esc(t('sent'))+'</div>'; }); }
 });
 window.addEventListener('scroll', onScroll, {passive:true});
-window.addEventListener('resize', function(){ var st = document.getElementById('heroStick'); if(st) st._top = 0; onScroll(); });
+window.addEventListener('resize', onScroll);
 window.addEventListener('hashchange', route);
 
 function setLang(l){
@@ -953,7 +969,6 @@ function setLang(l){
 }
 
 /* ---------- boot ---------- */
-if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ var st = document.getElementById('heroStick'); if(st) st._top = 0; onScroll(); });
 renderChrome(); renderHome(); route();
 var bust = '?v=' + Math.floor(Date.now() / 300000);
 Promise.all([
