@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kukmara O‘zbekiston — quyma alyuminiy idishlar</title>
+<meta name="description" content="Kukmara idishlarining O‘zbekistondagi rasmiy distribyutori. Qozonlar, skovorodkalar, jarovnyalar va boshqa quyma alyuminiy idishlar katalogi.">
+<meta name="theme-color" content="#FFFDF8">
+<meta property="og:title" content="Kukmara O‘zbekiston">
+<meta property="og:description" content="Avloddan avlodga o‘tadigan idishlar. Rasmiy distribyutor.">
+<meta property="og:image" content="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_hero.jpg">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_favicon.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFDF8; --cream:#FAF3E6; --ink:#3A2F24; --muted:#7A6B5B; --red:#E1001A; --red-h:#B80015; --line:#ECDFC8;
+  --serif:'Prata', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --wrap:1240px; --pad:clamp(20px, 5vw, 56px);
+  --hdr:68px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:calc(var(--hdr) + env(safe-area-inset-top, 0px));}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer;}
+:focus-visible{outline:2px solid var(--red); outline-offset:3px; border-radius:6px;}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 var(--pad);}
+h1,h2,h3{font-family:var(--serif); font-weight:400; margin:0; letter-spacing:-0.01em;}
+h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
+.lead{color:var(--muted); max-width:34em; margin:14px 0 0; font-size:clamp(16px,1.4vw,18px);}
+.sec{padding:clamp(80px, 11vw, 150px) 0 0;}
+.sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:clamp(32px,4vw,52px);}
+.textlink{font-weight:500; text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px; white-space:nowrap;}
+.textlink:hover{border-color:var(--ink);}
+
+/* buttons */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:50px; padding:0 26px; border-radius:999px; font-weight:500; font-size:16px; text-decoration:none; transition:background .2s, color .2s, border-color .2s;}
+.btn-red{background:var(--red); color:#fff;}
+.btn-red:hover{background:var(--red-h);}
+.btn-line{border:1px solid rgba(58,47,36,.25); color:var(--ink);}
+.btn-line:hover{border-color:var(--ink);}
+.btn svg{width:18px; height:18px;}
+
+/* header */
+.hdr{position:fixed; inset:0 0 auto 0; z-index:50; padding-top:env(safe-area-inset-top, 0px); transition:background .3s, box-shadow .3s;}
+.hdr.solid{background:rgba(255,253,248,.82); -webkit-backdrop-filter:saturate(1.4) blur(16px); backdrop-filter:saturate(1.4) blur(16px); box-shadow:0 1px 0 var(--line);}
+.hdr-in{height:var(--hdr); display:flex; align-items:center; gap:28px;}
+.logo{display:block; flex:none;}
+.logo img{height:22px; width:auto;}
+.nav{display:flex; gap:26px; margin:0 auto; font-size:15px;}
+.nav a{text-decoration:none; color:var(--muted); padding:6px 0; position:relative; transition:color .2s;}
+.nav a:hover, .nav a.on{color:var(--ink);}
+.nav a.on::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--ink);}
+.tools{display:flex; align-items:center; gap:6px; margin-left:auto;}
+.nav + .tools{margin-left:0;}
+.icon-btn{width:44px; height:44px; display:grid; place-items:center; border-radius:50%; position:relative;}
+.icon-btn:hover{background:var(--cream);}
+.icon-btn svg{width:21px; height:21px;}
+.badge{position:absolute; top:5px; right:3px; min-width:18px; height:18px; padding:0 5px; border-radius:9px; background:var(--red); color:#fff; font-size:11px; font-weight:600; line-height:18px; text-align:center;}
+.badge:empty{display:none;}
+.lang{display:flex; gap:2px; font-size:13px; font-weight:500; margin:0 4px;}
+.lang button{padding:6px 7px; border-radius:6px; color:var(--muted);}
+.lang button.on{color:var(--ink); background:var(--cream);}
+.burger{display:none;}
+@media (max-width:1020px){
+  .nav{display:none;} .burger{display:grid;}
+  .tools .lang{display:none;}
+}
+
+/* mobile menu */
+.menu{position:fixed; inset:0; z-index:60; background:var(--bg); display:flex; flex-direction:column; padding:calc(env(safe-area-inset-top,0px) + 12px) var(--pad) calc(env(safe-area-inset-bottom,0px) + 28px); visibility:hidden; opacity:0; transition:opacity .25s, visibility 0s .25s;}
+.menu.open{visibility:visible; opacity:1; transition:opacity .25s;}
+.menu-top{display:flex; align-items:center; justify-content:space-between; height:var(--hdr);}
+.menu nav{display:flex; flex-direction:column; margin-top:24px;}
+.menu nav a{font-family:var(--serif); font-size:34px; line-height:1.2; padding:10px 0; text-decoration:none; border-bottom:1px solid var(--line);}
+.menu-foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.menu .lang{font-size:15px;}
+.menu .lang button{padding:10px 12px;}
+
+/* hero */
+.hero{height:190vh; position:relative;}
+.hero-stick{position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; --p:0;}
+.hero-text{position:absolute; left:0; right:0; top:calc(var(--hdr) + env(safe-area-inset-top,0px) + 4vh); text-align:center; padding:0 var(--pad); opacity:calc(1 - var(--p) * 2.4); transform:translateY(calc(var(--p) * -60px));}
+.hero h1{font-size:clamp(42px, 7.4vw, 104px); line-height:1.02; max-width:12em; margin:0 auto;}
+.hero-sub{color:var(--muted); margin:18px auto 0; max-width:30em; font-size:clamp(16px,1.5vw,19px);}
+.hero-cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+.hero-media{position:absolute; inset:0; --t:calc(1 - var(--p));
+  clip-path:inset(calc(var(--t) * var(--top)) calc(var(--t) * var(--side)) calc(var(--t) * 3.5vh) calc(var(--t) * var(--side)) round calc(var(--t) * 28px));
+  --top:47vh; --side:var(--pad);}
+.hero-media img{width:100%; height:100%; object-fit:cover; transform:scale(calc(1.12 - var(--p) * 0.12)); transform-origin:50% 70%;}
+.hero-cap{position:absolute; left:var(--pad); bottom:calc(env(safe-area-inset-bottom,0px) + 34px); color:#fff; font-family:var(--serif); font-size:clamp(22px,2.6vw,34px); line-height:1.15; max-width:14em; text-shadow:0 2px 24px rgba(0,0,0,.35); opacity:calc((var(--p) - .7) * 3.3);}
+.hero-cap small{display:block; font-family:var(--sans); font-size:14px; margin-top:8px; opacity:.85;}
+@media (max-width:700px){
+  .hero-media{--top:56vh;}
+  .hero-sub{display:none;}
+}
+@media (max-height:620px) and (max-width:700px){ .hero-media{--top:62vh;} }
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto;} .hero-stick{position:relative;}
+  .hero-text{opacity:1; transform:none;} .hero-media img{transform:none;} .hero-cap{opacity:0;}
+}
+
+/* collections rail */
+.rail{display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px var(--pad) 18px; scrollbar-width:none; scroll-padding:0 var(--pad);}
+.rail::-webkit-scrollbar{display:none;}
+.rail-wrap{max-width:calc(var(--wrap) + 0px); margin:0 auto;}
+.col-card{flex:none; width:min(78vw, 400px); scroll-snap-align:start; text-decoration:none; display:block;}
+.col-card .ph{aspect-ratio:4/5; border-radius:22px; overflow:hidden; background:var(--cream);}
+.col-card img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.col-card:hover img{transform:scale(1.03);}
+.col-card h3{font-size:28px; margin-top:18px;}
+.col-card p{margin:4px 0 0; color:var(--muted); font-size:15px;}
+.rail-nav{display:flex; gap:8px;}
+.rail-nav button{width:46px; height:46px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center;}
+.rail-nav button:hover{border-color:var(--ink);}
+.rail-nav svg{width:18px; height:18px;}
+@media (max-width:700px){ .rail-nav{display:none;} }
+
+/* categories */
+.cats{display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;}
+.cat{position:relative; display:block; text-decoration:none; border-radius:18px; overflow:hidden; background:var(--cream); aspect-ratio:1/1;}
+.cat img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.cat:hover img{transform:scale(1.04);}
+.cat .lbl{position:absolute; left:0; right:0; bottom:0; padding:44px 18px 16px; color:#fff; background:linear-gradient(to top, rgba(30,22,14,.62), rgba(30,22,14,0)); font-weight:500; font-size:16px; line-height:1.3;}
+.cat .lbl span{display:block; font-weight:400; font-size:13px; opacity:.8; margin-top:2px;}
+.cat.big{grid-column:span 2; grid-row:span 2; aspect-ratio:auto;}
+.cat.big .lbl{font-family:var(--serif); font-weight:400; font-size:clamp(24px,2.6vw,34px); padding:80px 26px 24px;}
+.cat.big .lbl span{font-family:var(--sans); font-size:14px;}
+@media (max-width:900px){ .cats{grid-template-columns:repeat(2,1fr); gap:12px;} .cat.big{grid-row:span 1; aspect-ratio:4/3;} }
+
+/* why */
+.why{display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(32px,6vw,90px); align-items:center;}
+.why-ph{border-radius:22px; overflow:hidden; aspect-ratio:4/5;}
+.why-ph img{width:100%; height:100%; object-fit:cover;}
+.facts{margin-top:36px;}
+.fact{display:grid; grid-template-columns:minmax(120px, auto) 1fr; gap:22px; padding:24px 0; border-top:1px solid var(--line); align-items:baseline;}
+.fact:last-child{border-bottom:1px solid var(--line);}
+.fact b{font-family:var(--serif); font-weight:400; font-size:clamp(34px,3.6vw,48px); line-height:1; color:var(--red);}
+.fact h3{font-family:var(--sans); font-weight:600; font-size:17px; margin:0 0 4px; letter-spacing:0;}
+.fact p{margin:0; color:var(--muted); font-size:15.5px;}
+@media (max-width:900px){ .why{grid-template-columns:1fr;} .why-ph{aspect-ratio:4/3;} .fact{grid-template-columns:1fr; gap:8px;} }
+
+/* promos & news */
+.promo-empty{background:var(--cream); border-radius:22px; padding:clamp(28px,4vw,48px); display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;}
+.promo-empty p{margin:0; font-family:var(--serif); font-size:clamp(22px,2.4vw,30px); line-height:1.25; max-width:22em;}
+.promos{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:18px;}
+.promo{border-radius:22px; overflow:hidden; background:var(--cream); text-decoration:none; display:block;}
+.promo .ph{aspect-ratio:16/10; overflow:hidden;}
+.promo .ph img{width:100%; height:100%; object-fit:cover;}
+.promo .bd{padding:20px 22px 24px;}
+.promo h3{font-size:24px;}
+.promo p{margin:8px 0 0; color:var(--muted); font-size:15px;}
+.promo .until{display:inline-block; margin-top:14px; font-size:13px; font-weight:500; color:var(--red);}
+.news{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,32px);}
+.news-item{text-decoration:none; display:block;}
+.news-item .ph{aspect-ratio:3/2; border-radius:18px; overflow:hidden; background:var(--cream);}
+.news-item img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.news-item:hover img{transform:scale(1.03);}
+.news-item time{display:block; margin-top:16px; font-size:13px; color:var(--muted);}
+.news-item h3{font-size:24px; line-height:1.2; margin-top:6px;}
+.news-item p{margin:8px 0 0; color:var(--muted); font-size:15px;}
+@media (max-width:900px){ .news{grid-template-columns:1fr;} .news-item:nth-child(n+2) .ph{display:none;} }
+
+/* about / timeline */
+.about{background:var(--cream); padding:clamp(80px,11vw,150px) 0; margin-top:clamp(80px,11vw,150px);}
+.about-top{display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,6vw,90px); align-items:end;}
+.about-top p{margin:0; font-size:clamp(16px,1.4vw,18px); color:var(--muted);}
+.about-top p + p{margin-top:14px;}
+.about-ph{margin-top:clamp(40px,5vw,64px); border-radius:22px; overflow:hidden; aspect-ratio:21/9;}
+.about-ph img{width:100%; height:100%; object-fit:cover; object-position:50% 60%;}
+.tl{list-style:none; margin:clamp(40px,5vw,64px) 0 0; padding:0; display:grid; grid-template-columns:repeat(5,1fr); gap:24px; position:relative;}
+.tl::before{content:""; position:absolute; left:0; right:0; top:9px; height:1px; background:#D9C8AA;}
+.tl li{position:relative; padding-top:36px;}
+.tl li::before{content:""; position:absolute; top:4px; left:0; width:11px; height:11px; border-radius:50%; background:var(--cream); border:1px solid var(--ink);}
+.tl li:last-child::before{background:var(--red); border-color:var(--red);}
+.tl b{font-family:var(--serif); font-weight:400; font-size:32px; line-height:1; display:block;}
+.tl p{margin:10px 0 0; font-size:15px; color:var(--muted);}
+.dist{margin-top:clamp(40px,5vw,60px); font-family:var(--serif); font-size:clamp(22px,2.4vw,30px); line-height:1.3; max-width:24em;}
+@media (max-width:900px){
+  .about-top{grid-template-columns:1fr;} .about-ph{aspect-ratio:4/3;}
+  .tl{grid-template-columns:1fr; gap:0;} .tl::before{left:5px; right:auto; top:0; bottom:0; width:1px; height:auto;}
+  .tl li{padding:0 0 28px 34px;} .tl li::before{top:8px;}
+}
+
+/* where */
+.where{display:grid; grid-template-columns:1.4fr 1fr; gap:18px; align-items:stretch;}
+.map{border-radius:22px; overflow:hidden; background:var(--cream); min-height:440px;}
+.map iframe{width:100%; height:100%; min-height:440px; border:0; display:block;}
+.stores{display:flex; flex-direction:column; gap:12px;}
+.city-filter{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:6px;}
+.chip{min-height:38px; padding:0 16px; border-radius:999px; border:1px solid var(--line); font-size:14px;}
+.chip.on{background:var(--ink); color:var(--bg); border-color:var(--ink);}
+.store{border:1px solid var(--line); border-radius:18px; padding:22px; text-align:left; width:100%; transition:border-color .2s;}
+.store.on{border-color:var(--ink);}
+.store h3{font-size:24px;}
+.store .addr{margin:6px 0 0; color:var(--muted);}
+.store .meta{margin:12px 0 0; font-size:15px;}
+.store .meta a{text-decoration:none; display:block;}
+.store .acts{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;}
+.store .acts .btn{min-height:44px; padding:0 20px; font-size:15px;}
+@media (max-width:900px){ .where{grid-template-columns:1fr;} .map, .map iframe{min-height:320px;} }
+
+/* contacts */
+.contact{display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,6vw,90px);}
+.clist{margin-top:28px; display:flex; flex-direction:column;}
+.clist a{display:flex; align-items:center; gap:16px; padding:18px 0; border-top:1px solid var(--line); text-decoration:none; font-size:18px;}
+.clist a:last-child{border-bottom:1px solid var(--line);}
+.clist svg{width:20px; height:20px; color:var(--muted); flex:none;}
+.clist small{display:block; font-size:13px; color:var(--muted);}
+.form{display:flex; flex-direction:column; gap:14px;}
+.field label{display:block; font-size:14px; font-weight:500; margin-bottom:6px;}
+.field input, .field textarea{width:100%; font:inherit; font-size:16px; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; min-height:52px; transition:border-color .2s;}
+.field textarea{min-height:120px; resize:vertical;}
+.field input:focus, .field textarea:focus{outline:none; border-color:var(--ink);}
+.form .note{font-size:14px; color:var(--muted); margin:0;}
+.form-ok{background:var(--cream); border-radius:18px; padding:28px; font-family:var(--serif); font-size:24px; line-height:1.3;}
+@media (max-width:900px){ .contact{grid-template-columns:1fr;} }
+
+/* footer */
+.ftr{margin-top:clamp(80px,11vw,150px); border-top:1px solid var(--line); padding:48px 0 calc(env(safe-area-inset-bottom,0px) + 40px); font-size:14px; color:var(--muted);}
+.ftr-in{display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; align-items:flex-start;}
+.ftr img{height:46px; width:auto;}
+.ftr nav{display:flex; flex-wrap:wrap; gap:10px 24px;}
+.ftr nav a{text-decoration:none;}
+.ftr nav a:hover{color:var(--ink);}
+.ftr .copy{margin-top:32px;}
+
+/* catalog page */
+#catalogPage{display:none; padding-top:calc(var(--hdr) + env(safe-area-inset-top,0px));}
+body.route-catalog #homePage{display:none;}
+body.route-catalog #catalogPage{display:block;}
+.cat-head{padding:clamp(28px,4vw,48px) 0 24px;}
+.crumbs{display:flex; flex-wrap:wrap; gap:6px; font-size:14px; color:var(--muted); margin-bottom:14px;}
+.crumbs a{text-decoration:none;}
+.crumbs a:hover{color:var(--ink);}
+.crumbs span.sep{opacity:.5;}
+.cat-head h1{font-size:clamp(34px,4.6vw,60px); line-height:1.06;}
+.search{position:relative; margin-top:24px; max-width:560px;}
+.search input{width:100%; font:inherit; font-size:16px; border:1px solid var(--line); background:#fff; border-radius:999px; min-height:52px; padding:0 48px 0 50px; color:var(--ink);}
+.search input:focus{outline:none; border-color:var(--ink);}
+.search > svg{position:absolute; left:18px; top:50%; transform:translateY(-50%); width:19px; height:19px; color:var(--muted);}
+.search .clr{position:absolute; right:6px; top:50%; transform:translateY(-50%); width:40px; height:40px; display:none; place-items:center; border-radius:50%;}
+.search .clr.show{display:grid;}
+.search .clr svg{width:18px; height:18px;}
+.cat-body{display:grid; grid-template-columns:240px 1fr; gap:48px; padding-bottom:20px;}
+.tree{position:sticky; top:calc(var(--hdr) + 24px); align-self:start; font-size:15px; max-height:calc(100vh - var(--hdr) - 48px); overflow:auto;}
+.tree a{display:block; padding:8px 12px; border-radius:10px; text-decoration:none; color:var(--muted); line-height:1.35;}
+.tree a:hover{color:var(--ink);}
+.tree a.on{color:var(--ink); background:var(--cream); font-weight:500;}
+.tree .sub a{padding-left:26px; font-size:14px;}
+@media (max-width:900px){ .cat-body{grid-template-columns:1fr;} .tree{display:none;} }
+.info-box{background:var(--cream); border-radius:18px; padding:22px 24px; margin-bottom:28px;}
+.info-box summary{cursor:pointer; font-weight:500; list-style:none; display:flex; justify-content:space-between; align-items:center; min-height:24px;}
+.info-box summary::-webkit-details-marker{display:none;}
+.info-box summary svg{width:18px; height:18px; transition:transform .2s;}
+.info-box[open] summary svg{transform:rotate(180deg);}
+.info-box p{margin:14px 0 0; color:var(--muted);}
+.info-box ul{margin:14px 0 0; padding-left:20px; columns:2; column-gap:32px; font-size:15px;}
+.info-box li{margin-bottom:6px; break-inside:avoid;}
+@media (max-width:700px){ .info-box ul{columns:1;} }
+.tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.tile{display:block; text-decoration:none;}
+.tile .ph{aspect-ratio:4/3; border-radius:18px; overflow:hidden; background:var(--cream);}
+.tile img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.tile:hover img{transform:scale(1.03);}
+.tile h3{font-family:var(--sans); font-weight:500; font-size:17px; margin-top:12px; letter-spacing:0; line-height:1.3;}
+.tile p{margin:2px 0 0; font-size:14px; color:var(--muted);}
+@media (max-width:900px){ .tiles{grid-template-columns:repeat(2,1fr); gap:12px;} }
+.grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+@media (max-width:1100px){ .grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width:700px){ .grid{grid-template-columns:repeat(2,1fr); gap:10px;} }
+.prod{display:flex; flex-direction:column; text-decoration:none; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#fff; transition:border-color .2s;}
+.prod:hover{border-color:#D9C8AA;}
+.prod .ph{aspect-ratio:1/1; background:#fff; padding:10px;}
+.prod .ph img{width:100%; height:100%; object-fit:contain;}
+.prod .bd{padding:12px 14px 16px; border-top:1px solid var(--line); flex:1; display:flex; flex-direction:column;}
+.prod .nm{font-size:14.5px; line-height:1.4; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+.prod .art{margin-top:auto; padding-top:8px; font-size:13px; color:var(--muted);}
+.empty{padding:48px 0; color:var(--muted); font-size:18px;}
+.count{color:var(--muted); font-size:15px; margin:0 0 18px;}
+.more{display:flex; justify-content:center; margin-top:28px;}
+
+/* product sheet */
+.ov{position:fixed; inset:0; z-index:70; background:rgba(40,30,20,.42); opacity:0; visibility:hidden; transition:opacity .25s, visibility 0s .25s;}
+.ov.open{opacity:1; visibility:visible; transition:opacity .25s;}
+.sheet{position:fixed; z-index:71; background:var(--bg); overflow:auto; overscroll-behavior:contain; transition:transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s .35s; visibility:hidden;}
+.sheet.open{visibility:visible; transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+.sheet-r{top:0; right:0; bottom:0; width:min(560px, 100vw); transform:translateX(100%); padding:calc(env(safe-area-inset-top,0px) + 16px) 28px calc(env(safe-area-inset-bottom,0px) + 28px);}
+.sheet-r.open{transform:none;}
+@media (max-width:700px){
+  .sheet-r{top:auto; left:0; width:100%; max-height:92vh; border-radius:22px 22px 0 0; transform:translateY(100%); padding:10px 20px calc(env(safe-area-inset-bottom,0px) + 24px);}
+  .sheet-r::before{content:""; display:block; width:40px; height:4px; border-radius:2px; background:var(--line); margin:0 auto 6px;}
+}
+.sheet-top{display:flex; justify-content:space-between; align-items:center; min-height:48px; position:sticky; top:-16px; background:var(--bg); z-index:2;}
+.sheet-top h2{font-size:26px;}
+.pv-img{background:#fff; border:1px solid var(--line); border-radius:18px; aspect-ratio:1/1; display:grid; place-items:center; padding:20px; cursor:zoom-in; margin-top:8px;}
+.pv-img img{max-height:100%; object-fit:contain;}
+.pv-path{margin-top:22px; font-size:14px; color:var(--muted);}
+.pv-path a{text-decoration:none;} .pv-path a:hover{color:var(--ink);}
+.pv-name{font-family:var(--serif); font-size:28px; line-height:1.2; margin:6px 0 0;}
+.pv-meta{margin:16px 0 0; display:grid; grid-template-columns:auto 1fr; gap:6px 18px; font-size:15px;}
+.pv-meta dt{color:var(--muted);} .pv-meta dd{margin:0;}
+.pv-acts{display:flex; flex-direction:column; gap:10px; margin-top:24px;}
+.pv-acts .row{display:flex; gap:10px;} .pv-acts .row .btn{flex:1;}
+.pv-specs{margin-top:28px; border-top:1px solid var(--line); padding-top:18px;}
+.pv-specs h3{font-family:var(--sans); font-size:15px; font-weight:600; letter-spacing:0;}
+.pv-specs ul{margin:10px 0 0; padding-left:20px; font-size:15px; color:var(--muted);}
+.pv-rel{margin-top:28px;}
+.pv-rel h3{font-family:var(--sans); font-size:15px; font-weight:600; letter-spacing:0; margin-bottom:12px;}
+.pv-rel .grid{grid-template-columns:repeat(2,1fr); gap:10px;}
+
+/* request list */
+.ritem{display:grid; grid-template-columns:64px 1fr; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);}
+.ritem img{width:64px; height:64px; object-fit:contain; background:#fff; border:1px solid var(--line); border-radius:12px; padding:4px;}
+.ritem .nm{font-size:14.5px; line-height:1.35;}
+.ritem .art{font-size:13px; color:var(--muted);}
+.qty{display:flex; align-items:center; gap:4px; margin-top:8px;}
+.qty button{width:36px; height:36px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center;}
+.qty button svg{width:15px; height:15px;}
+.qty span{min-width:30px; text-align:center; font-weight:500;}
+.qty .rm{margin-left:auto; border:0; width:auto; padding:0 6px; font-size:13px; color:var(--muted); border-radius:6px;}
+.list-form{margin-top:24px;}
+.list-empty{padding:40px 0; color:var(--muted);}
+.list-empty p{font-family:var(--serif); font-size:24px; color:var(--ink); margin:0 0 18px; line-height:1.3;}
+
+/* lightbox */
+.lb{position:fixed; inset:0; z-index:90; background:rgba(20,15,10,.92); display:none; place-items:center; padding:24px;}
+.lb.open{display:grid;}
+.lb img{max-width:100%; max-height:86vh; background:#fff; border-radius:14px;}
+.lb .x{position:absolute; top:calc(env(safe-area-inset-top,0px) + 14px); right:14px; color:#fff;}
+
+/* fab */
+.fab{position:fixed; right:18px; bottom:calc(env(safe-area-inset-bottom,0px) + 18px); z-index:40; display:none;}
+.fab > button{width:58px; height:58px; border-radius:50%; background:var(--red); color:#fff; display:grid; place-items:center; box-shadow:0 8px 24px rgba(225,0,26,.32);}
+.fab > button svg{width:24px; height:24px;}
+.fab-menu{position:absolute; right:0; bottom:70px; background:var(--bg); border:1px solid var(--line); border-radius:18px; padding:8px; width:240px; box-shadow:0 18px 50px rgba(58,47,36,.16); display:none;}
+.fab.open .fab-menu{display:block;}
+.fab-menu a{display:flex; align-items:center; gap:12px; padding:12px; border-radius:12px; text-decoration:none; font-size:15px;}
+.fab-menu a:hover{background:var(--cream);}
+.fab-menu svg{width:19px; height:19px; color:var(--muted);}
+@media (max-width:900px){ .fab{display:block;} }
+
+/* toast */
+.toast{position:fixed; left:50%; bottom:calc(env(safe-area-inset-bottom,0px) + 90px); transform:translate(-50%, 20px); background:var(--ink); color:var(--bg); padding:13px 20px; border-radius:14px; font-size:15px; z-index:95; opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; max-width:calc(100vw - 40px); text-align:center;}
+.toast.show{opacity:1; transform:translate(-50%,0);}
+
+.reveal{opacity:0; transform:translateY(20px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1; transform:none;}
+@media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} *{scroll-behavior:auto !important;} }
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
+.skel{background:var(--cream); border-radius:18px; aspect-ratio:4/3;}
+</style>
+</head>
+<body>
+<!-- Netlify Forms uchun yashirin namunalar -->
+<form name="sorov" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="bot-field"><input name="ism"><input name="telefon"><input name="shahar"><textarea name="izoh"></textarea><textarea name="royxat"></textarea><input name="til"></form>
+<form name="murojaat" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="bot-field"><input name="ism"><input name="telefon"><textarea name="xabar"></textarea><input name="til"></form>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#/" aria-label="Kukmara"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_wordmark.png" alt="Kukmara" width="155" height="22"></a>
+    <nav class="nav" id="nav"></nav>
+    <div class="tools">
+      <button class="icon-btn" data-act="search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <div class="lang" data-lang></div>
+      <button class="icon-btn" data-act="list" aria-label="List"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="badge" id="badge"></span></button>
+      <button class="icon-btn burger" data-act="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-top">
+    <a class="logo" href="#/"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_wordmark.png" alt="Kukmara" width="155" height="22"></a>
+    <button class="icon-btn" data-act="menu-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <nav id="mnav"></nav>
+  <div class="menu-foot"><div class="lang" data-lang></div><a class="btn btn-red" href="tel:+998956502222" data-t="call"></a></div>
+</div>
+
+<main id="homePage"></main>
+<main id="catalogPage"></main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-in">
+      <img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="172" height="46">
+      <nav id="fnav"></nav>
+    </div>
+    <div class="copy" id="copy"></div>
+  </div>
+</footer>
+
+<div class="ov" id="ov"></div>
+<aside class="sheet sheet-r" id="pv" role="dialog" aria-modal="true"></aside>
+<aside class="sheet sheet-r" id="rl" role="dialog" aria-modal="true"></aside>
+<div class="lb" id="lb"><button class="icon-btn x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button><img alt=""></div>
+<div class="fab" id="fab">
+  <div class="fab-menu" id="fabMenu"></div>
+  <button aria-label="Contact" data-act="fab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></button>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+'use strict';
+var RAW = 'https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/';
+var IMG = function(n){ return RAW + 'images/' + n; };
+var TG_ADMIN = 'https://t.me/kukmara_admin', TG_CH = 'https://t.me/kukmarauz', YT = 'https://www.youtube.com/@kukmarauzbekistan9928';
+var PHONES = ['+998 95 650 22 22', '+998 95 514 22 22'];
+var tel = function(p){ return 'tel:' + p.replace(/[^+\d]/g,''); };
+
+var T = {
+uz:{
+  collections:'Kolleksiyalar', catalog:'Katalog', company:'Kompaniya', news:'Yangiliklar', where:'Qayerdan sotib olish', contacts:'Kontaktlar', promos:'Chegirmalar',
+  heroTitle:'Avloddan avlodga o‘tadigan idishlar',
+  heroSub:'Kukmor zavodida quyilgan alyuminiy idishlar. O‘zbekistondagi rasmiy distribyutor.',
+  heroCap:'Kukmor zavodi idishlari', heroCapS:'1950-yildan beri quyma alyuminiy',
+  openCatalog:'Katalogni ochish', whereBuy:'Qayerdan sotib olish',
+  colLead:'Har bir kolleksiya — o‘z qoplamasi va xarakteriga ega quyma idishlar oilasi.',
+  catTitle:'Nima qidiryapsiz?', catLead:'Qozonlardan pichoqlargacha — barcha mahsulotlar bo‘limlarga ajratilgan.',
+  allCatalog:'Butun katalog', allCatalogS:'700 dan ortiq mahsulot',
+  items:function(n){ return n + ' ta mahsulot'; },
+  whyTitle:'Nega aynan Kukmara',
+  whyLead:'Qalin quyma idish bir marta olinadi va yillar davomida xizmat qiladi.',
+  facts:[['1743','Zavod ildizlari','Kukmordagi mis eritish zavodi — bugungi ishlab chiqarishning boshlanishi.'],['1950','Alyuminiy idishlar','Yetmish yildan ortiq vaqtdan beri zavod alyuminiy idishlar quyadi.'],['Quyma','Qalin devorlar','Quyma korpus issiqlikni bir tekis tarqatadi va shaklini yo‘qotmaydi.'],['Qoplama','Yopishmaydi','Ovqat kuymaydi, idish oson yuviladi.']],
+  promoEmpty:'Hozircha faol aksiyalar yo‘q. Yangi chegirmalar haqida birinchi bo‘lib Telegram kanalimizda bilasiz.',
+  tgChannel:'Telegram kanal', until:'gacha', allNews:'Barcha yangiliklar',
+  aboutTitle:'Kukmordan — sizning oshxonangizgacha',
+  about1:'Kukmor tarixi 1743-yilda, savdogar Semyon Yeremeyev-Inozemsev mis eritish zavodiga asos solganidan boshlanadi. 1950-yilda bu yerda alyuminiy idishlar ishlab chiqarish ochildi.',
+  about2:'Avlodlar tajribasini saqlab, zavod yangi avlod mahsulotini yaratdi — KUKMARA. U an’anaviy quyma texnologiyani zamonaviy qoplamalar bilan birlashtiradi.',
+  tl:[['1743','Kukmorda mis eritish zavodiga asos solindi'],['1930','Metall idishlar va ro‘zg‘or buyumlari ishlab chiqarila boshlandi'],['1950','Alyuminiy idishlar ishlab chiqarish ochildi'],['1967','Zavod «Kukmor metall idishlar zavodi» nomini oldi'],['Bugun','KUKMARA Rossiya, MDH va ko‘plab davlatlarda tanilgan']],
+  dist:'Biz Kukmara’ning O‘zbekistondagi rasmiy distribyutorimiz.',
+  whereLead:'Do‘konga keling — idishlarni qo‘lingizda ushlab ko‘ring.',
+  allCities:'Barchasi', route:'Yo‘l ko‘rsatish', call:'Qo‘ng‘iroq qilish', hours:'Ish vaqti',
+  contactsLead:'Savol bo‘lsa, yozing yoki qo‘ng‘iroq qiling — menejer tez javob beradi.',
+  tgAdmin:'Menejerga yozish', ytS:'Video sharhlar', tgS:'Yangiliklar va aksiyalar',
+  name:'Ismingiz', phone:'Telefon', message:'Xabar', city:'Shahar', comment:'Izoh',
+  send:'Yuborish', sending:'Yuborilmoqda…', sent:'Rahmat! Xabaringiz qabul qilindi, menejer tez orada bog‘lanadi.',
+  required:'Ism va telefonni kiriting',
+  search:'Nom yoki artikul bo‘yicha qidirish', found:function(n){ return n + ' ta natija'; }, nothing:'Hech narsa topilmadi. Artikulni yoki boshqa so‘zni kiriting.',
+  showMore:'Yana ko‘rsatish', about:'Kolleksiya haqida',
+  article:'Artikul', collection:'Bo‘lim',
+  addList:'Ro‘yxatga qo‘shish', inList:'Ro‘yxatda', askPrice:'Narxni so‘rash', specs:'Xususiyatlari', related:'Shu bo‘limdan',
+  listTitle:'So‘rov ro‘yxati', listEmpty:'Ro‘yxat bo‘sh', listEmptyS:'Katalogdan mahsulot tanlang — narxini menejer aytadi.',
+  listNote:'Narxlar saytda ko‘rsatilmaydi. So‘rov yuboring — menejer narx va mavjudlik bilan qo‘ng‘iroq qiladi.',
+  sendRequest:'So‘rov yuborish', sendTg:'Telegram orqali yuborish', remove:'Olib tashlash',
+  copied:'Matn nusxalandi — Telegram chatiga joylab yuboring', added:'Ro‘yxatga qo‘shildi',
+  askText:'Assalomu alaykum! Ushbu mahsulot narxini bilmoqchi edim:', listText:'Assalomu alaykum! Quyidagi mahsulotlar narxini bilmoqchi edim:',
+  pcs:'dona', close:'Yopish',
+  rights:'Kukmara mahsulotlarining O‘zbekistondagi rasmiy distribyutori.',
+  months:['yanvar','fevral','mart','aprel','may','iyun','iyul','avgust','sentabr','oktabr','noyabr','dekabr']
+},
+ru:{
+  collections:'Коллекции', catalog:'Каталог', company:'Компания', news:'Новости', where:'Где купить', contacts:'Контакты', promos:'Акции',
+  heroTitle:'Посуда, которую передают по наследству',
+  heroSub:'Литая алюминиевая посуда Кукморского завода. Официальный дистрибьютор в Узбекистане.',
+  heroCap:'Посуда Кукморского завода', heroCapS:'Литой алюминий с 1950 года',
+  openCatalog:'Открыть каталог', whereBuy:'Где купить',
+  colLead:'Каждая коллекция — семья литой посуды со своим покрытием и характером.',
+  catTitle:'Что вы ищете?', catLead:'От казанов до ножей — весь ассортимент разложен по разделам.',
+  allCatalog:'Весь каталог', allCatalogS:'Более 700 товаров',
+  items:function(n){ var m=n%10, h=n%100; return n + (m===1&&h!==11?' товар':(m>=2&&m<=4&&(h<12||h>14))?' товара':' товаров'); },
+  whyTitle:'Почему Kukmara',
+  whyLead:'Толстостенную литую посуду покупают один раз — и пользуются годами.',
+  facts:[['1743','Истоки завода','Медеплавильный завод в Кукморе — начало сегодняшнего производства.'],['1950','Алюминиевая посуда','Больше семидесяти лет завод льёт алюминиевую посуду.'],['Литьё','Толстые стенки','Литой корпус равномерно распределяет тепло и не деформируется.'],['Покрытие','Не пригорает','Еда не прилипает, посуда легко моется.']],
+  promoEmpty:'Сейчас активных акций нет. О новых скидках первыми узнают подписчики нашего Telegram-канала.',
+  tgChannel:'Telegram-канал', until:'до', allNews:'Все новости',
+  aboutTitle:'Из Кукмора — на вашу кухню',
+  about1:'История Кукмора начинается в 1743 году, когда купец Семён Еремеев-Иноземцев основал здесь медеплавильный завод. В 1950 году здесь открылось производство алюминиевой посуды.',
+  about2:'Сохранив опыт поколений, завод создал продукт нового поколения — KUKMARA. Он сочетает традиционное литьё и современные покрытия.',
+  tl:[['1743','В Кукморе основан медеплавильный завод'],['1930','Начат выпуск металлической посуды и домашней утвари'],['1950','Открыто производство алюминиевой посуды'],['1967','Завод получил название «Кукморский завод Металлопосуды»'],['Сегодня','KUKMARA знают в России, СНГ и многих других странах']],
+  dist:'Мы — официальный дистрибьютор Kukmara в Узбекистане.',
+  whereLead:'Приходите в магазин — подержите посуду в руках.',
+  allCities:'Все', route:'Проложить маршрут', call:'Позвонить', hours:'Часы работы',
+  contactsLead:'Есть вопрос — напишите или позвоните, менеджер быстро ответит.',
+  tgAdmin:'Написать менеджеру', ytS:'Видеообзоры', tgS:'Новости и акции',
+  name:'Ваше имя', phone:'Телефон', message:'Сообщение', city:'Город', comment:'Комментарий',
+  send:'Отправить', sending:'Отправляем…', sent:'Спасибо! Сообщение получено, менеджер скоро свяжется с вами.',
+  required:'Укажите имя и телефон',
+  search:'Поиск по названию или артикулу', found:function(n){ return 'Найдено: ' + n; }, nothing:'Ничего не найдено. Попробуйте артикул или другое слово.',
+  showMore:'Показать ещё', about:'О коллекции',
+  article:'Артикул', collection:'Раздел',
+  addList:'Добавить в список', inList:'В списке', askPrice:'Узнать цену', specs:'Характеристики', related:'Из этого раздела',
+  listTitle:'Список запроса', listEmpty:'Список пуст', listEmptyS:'Выберите товары в каталоге — цену сообщит менеджер.',
+  listNote:'Цены на сайте не указаны. Отправьте запрос — менеджер перезвонит с ценой и наличием.',
+  sendRequest:'Отправить запрос', sendTg:'Отправить в Telegram', remove:'Убрать',
+  copied:'Текст скопирован — вставьте его в чат Telegram', added:'Добавлено в список',
+  askText:'Здравствуйте! Хочу узнать цену на товар:', listText:'Здравствуйте! Хочу узнать цены на товары:',
+  pcs:'шт.', close:'Закрыть',
+  rights:'Официальный дистрибьютор продукции Kukmara в Узбекистане.',
+  months:['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря']
+},
+en:{
+  collections:'Collections', catalog:'Catalogue', company:'Company', news:'News', where:'Where to buy', contacts:'Contacts', promos:'Offers',
+  heroTitle:'Cookware made to be handed down',
+  heroSub:'Cast aluminium cookware from the Kukmor factory. Official distributor in Uzbekistan.',
+  heroCap:'Made at the Kukmor factory', heroCapS:'Cast aluminium since 1950',
+  openCatalog:'Open the catalogue', whereBuy:'Where to buy',
+  colLead:'Each collection is a family of cast cookware with its own coating and character.',
+  catTitle:'What are you looking for?', catLead:'From kazans to knives — everything is sorted into sections.',
+  allCatalog:'Full catalogue', allCatalogS:'Over 700 products',
+  items:function(n){ return n + (n===1?' product':' products'); },
+  whyTitle:'Why Kukmara',
+  whyLead:'Thick cast cookware is bought once and used for years.',
+  facts:[['1743','Factory roots','A copper smelter in Kukmor is where today’s production began.'],['1950','Aluminium cookware','For over seventy years the factory has cast aluminium cookware.'],['Cast','Thick walls','A cast body spreads heat evenly and keeps its shape.'],['Coating','Non-stick','Food doesn’t stick and cleaning is easy.']],
+  promoEmpty:'There are no active offers right now. Our Telegram channel hears about new discounts first.',
+  tgChannel:'Telegram channel', until:'until', allNews:'All news',
+  aboutTitle:'From Kukmor to your kitchen',
+  about1:'Kukmor’s story begins in 1743, when merchant Semyon Yeremeyev-Inozemtsev founded a copper smelter here. In 1950 the factory opened aluminium cookware production.',
+  about2:'Keeping the experience of generations, the factory created a new-generation product — KUKMARA. It combines traditional casting with modern coatings.',
+  tl:[['1743','A copper smelter is founded in Kukmor'],['1930','Production of metal cookware and household goods begins'],['1950','Aluminium cookware production opens'],['1967','The plant is named the Kukmor Metal Cookware Factory'],['Today','KUKMARA is known across Russia, the CIS and beyond']],
+  dist:'We are the official Kukmara distributor in Uzbekistan.',
+  whereLead:'Visit the store and hold the cookware in your hands.',
+  allCities:'All', route:'Get directions', call:'Call us', hours:'Opening hours',
+  contactsLead:'Have a question? Message or call us — a manager will reply quickly.',
+  tgAdmin:'Message a manager', ytS:'Video reviews', tgS:'News and offers',
+  name:'Your name', phone:'Phone', message:'Message', city:'City', comment:'Comment',
+  send:'Send', sending:'Sending…', sent:'Thank you! Your message has been received — a manager will contact you soon.',
+  required:'Enter your name and phone',
+  search:'Search by name or article', found:function(n){ return n + ' results'; }, nothing:'Nothing found. Try an article number or another word.',
+  showMore:'Show more', about:'About the collection',
+  article:'Article', collection:'Section',
+  addList:'Add to list', inList:'In your list', askPrice:'Ask for price', specs:'Features', related:'From this section',
+  listTitle:'Request list', listEmpty:'Your list is empty', listEmptyS:'Pick products in the catalogue — a manager will tell you the price.',
+  listNote:'Prices aren’t shown on the site. Send a request and a manager will call with price and availability.',
+  sendRequest:'Send request', sendTg:'Send via Telegram', remove:'Remove',
+  copied:'Text copied — paste it into the Telegram chat', added:'Added to list',
+  askText:'Hello! I’d like to know the price of:', listText:'Hello! I’d like to know prices for:',
+  pcs:'pcs', close:'Close',
+  rights:'Official distributor of Kukmara products in Uzbekistan.',
+  months:['January','February','March','April','May','June','July','August','September','October','November','December']
+}};
+
+var EN = {'Аксессуары':'Accessories','Блинницы':'Crepe pans','Чайники':'Teapots','Чайники и френч-прессы':'Teapots and French presses','Штучные ножи':'Single knives','Электрочайники':'Electric kettles','Фены':'Hair dryers','Формы':'Baking forms','Френч-прессы':'French presses','Гранит Ультра':'Granit Ultra','Грация':'Gracia','Посуда':'Cookware','Жаровни':'Roasters','Мелкая бытовая техника':'Small appliances','Коптильни':'Smokers','Кастрюли':'Pots','Ковши':'Saucepans','Мангалы':'Grills','Миски':'Bowls','Мраморная':'Marble','Наборы':'Sets','Столовые приборы':'Cutlery','Печи и кухонные комплексы':'Stoves and kitchen units','Наборы ножей':'Knife sets','Ножи':'Knives','Противни':'Baking trays','Крышки':'Lids','Казан-очаги и походные казаны':'Kazan stoves and camping kazans','Казаны и кастрюли':'Kazans and pots','Литая посуда (без покрытия)':'Cast cookware (uncoated)','Ёмкости для хранения':'Storage containers','Шампуры':'Skewers','Сковородки':'Frying pans','Стаканы и бокалы':'Glasses','Стаканы и кружки':'Glasses and mugs','Stella':'Stella','Сувенирные кружки':'Souvenir mugs','Доски и формы':'Boards and forms','Trendy style':'Trendy Style','Треноги':'Tripods','Туризм':'Outdoor','Посуда с антипригарным покрытием':'Non-stick cookware','Посуда из нержавеющей стали':'Stainless steel cookware'};
+
+/* ---------- state ---------- */
+var store = { get:function(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }, set:function(k,v){ try{ localStorage.setItem(k,v); }catch(e){} } };
+var lang = store.get('kk_lang'); if(!T[lang]) lang = 'uz';
+var list = []; try{ list = JSON.parse(store.get('kk_list')) || []; }catch(e){ list = []; }
+var CAT = null, CONTENT = {stores:[], promos:[], news:[]}, PRODUCTS = [], BYID = {};
+var t = function(k){ return T[lang][k]; };
+var esc = function(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
+var uzfix = function(s){ return String(s).replace(/([oOgG])'/g,'$1‘').replace(/'/g,'’'); };
+function nm(n){
+  var o = n.name || n.title || {};
+  if(lang === 'en') return o.en || EN[o.ru] || o.ru || o.uz || '';
+  if(lang === 'uz') return uzfix(o.uz || o.ru || '');
+  return o.ru || o.uz || '';
+}
+function loc(o){ if(!o) return ''; if(typeof o === 'string') return o; return lang==='uz' ? uzfix(o.uz || o.ru || o.en || '') : (o[lang] || o.ru || o.uz || ''); }
+function kids(n){ return n.lines || n.types || []; }
+function node(path){ if(!CAT || path == null || path === '') return null; var p = String(path).split('.'), n = {lines:CAT}; for(var i=0;i<p.length;i++){ n = kids(n)[+p[i]]; if(!n) return null; } return n; }
+function chain(path){ var out=[], p=String(path).split('.'); for(var i=1;i<=p.length;i++){ out.push({path:p.slice(0,i).join('.'), n:node(p.slice(0,i).join('.'))}); } return out; }
+function count(n){ var c = (n.skus||[]).length; kids(n).forEach(function(k){ c += count(k); }); return c; }
+function infoOf(path){ var ch = chain(path); for(var i=ch.length-1;i>=0;i--){ var inf = ch[i].n && ch[i].n.info; if(inf && (inf.uz || inf.ru)) return inf[lang==='en'?'ru':lang] || inf.ru || inf.uz; } return null; }
+function prodName(p){ var o = p.name || {}; return lang === 'uz' ? uzfix(o.uz || o.ru) : (o.ru || o.uz); }
+
+function indexCatalog(){
+  PRODUCTS = []; BYID = {};
+  (function walk(n, path){
+    (n.skus||[]).forEach(function(s, i){ var id = (path ? path + '-' : '') + i; var p = {id:id, path:path, s:s, name:s.name, img:s.img, art:s.size}; PRODUCTS.push(p); BYID[id] = p; });
+    kids(n).forEach(function(k, i){ walk(k, path === '' ? String(i) : path + '.' + i); });
+  })({lines:CAT}, '');
+  PRODUCTS.forEach(function(p){ p.hay = ((p.name.ru||'') + ' ' + (p.name.uz||'') + ' ' + (p.art||'')).toLowerCase().replace(/ё/g,'е'); });
+}
+function nodeImg(n){ return n.img || (n.skus && n.skus[0] && n.skus[0].img) || ''; }
+
+/* ---------- icons ---------- */
+var I = {
+  arrowL:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+  arrowR:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>',
+  send:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4 3 11l7 2.5L12.5 21 21 4Z"/><path d="m10 13.5 4-3.5"/></svg>',
+  play:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9.5 4.5 2.5-4.5 2.5z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  minus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
+};
+
+var SECTIONS = [['collections','collections'],['catalog',null],['company','company'],['news','news'],['where','where'],['contacts','contacts']];
+function secHref(s){ return s[1] ? '#/s/' + s[1] : '#/catalog'; }
+
+/* ---------- chrome ---------- */
+function renderChrome(){
+  document.documentElement.lang = lang === 'uz' ? 'uz' : lang;
+  var links = SECTIONS.map(function(s){ return '<a href="'+secHref(s)+'" data-sec="'+(s[1]||'')+'">'+esc(t(s[0]))+'</a>'; }).join('');
+  document.getElementById('nav').innerHTML = links;
+  document.getElementById('mnav').innerHTML = links;
+  document.getElementById('fnav').innerHTML = links;
+  document.querySelectorAll('[data-lang]').forEach(function(el){
+    el.innerHTML = ['uz','ru','en'].map(function(l){ return '<button data-setlang="'+l+'" class="'+(l===lang?'on':'')+'" aria-pressed="'+(l===lang)+'">'+l.toUpperCase()+'</button>'; }).join('');
+  });
+  document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t(el.getAttribute('data-t')); });
+  document.getElementById('copy').textContent = '© ' + new Date().getFullYear() + ' Kukmara Uzbekistan. ' + t('rights');
+  document.getElementById('fabMenu').innerHTML =
+    '<a href="'+TG_ADMIN+'" target="_blank" rel="noopener">'+I.send+esc(t('tgAdmin'))+'</a>' +
+    PHONES.map(function(p){ return '<a href="'+tel(p)+'">'+I.phone+esc(p)+'</a>'; }).join('');
+  updateBadge();
+}
+function updateBadge(){ var n = list.reduce(function(a,b){ return a + b.qty; }, 0); document.getElementById('badge').textContent = n ? n : ''; }
+
+/* ---------- home ---------- */
+function fmtDate(d){ var x = new Date(d + 'T00:00:00'); if(isNaN(x)) return esc(d); var m = t('months')[x.getMonth()]; return lang==='en' ? m + ' ' + x.getDate() + ', ' + x.getFullYear() : x.getDate() + ' ' + m + ' ' + x.getFullYear(); }
+
+function renderHome(){
+  var h = '';
+  h += '<section class="hero" id="top"><div class="hero-stick" id="heroStick">' +
+    '<div class="hero-media"><img src="'+IMG('site_hero.jpg')+'" alt="" fetchpriority="high"><div class="hero-cap">'+esc(t('heroCap'))+'<small>'+esc(t('heroCapS'))+'</small></div></div>' +
+    '<div class="hero-text"><h1>'+esc(t('heroTitle'))+'</h1><p class="hero-sub">'+esc(t('heroSub'))+'</p>' +
+    '<div class="hero-cta"><a class="btn btn-red" href="#/catalog">'+esc(t('openCatalog'))+'</a><a class="btn btn-line" href="#/s/where">'+esc(t('whereBuy'))+'</a></div></div>' +
+    '</div></section>';
+
+  // collections
+  var ns = CAT ? CAT.filter(function(c){ return c.id === 'nonstick'; })[0] : null, nsIdx = CAT ? CAT.indexOf(ns) : 0;
+  h += '<section class="sec" id="collections"><div class="wrap"><div class="sec-head reveal"><div><h2>'+esc(t('collections'))+'</h2><p class="lead">'+esc(t('colLead'))+'</p></div>' +
+    '<div class="rail-nav"><button data-rail="-1" aria-label="Prev">'+I.arrowL+'</button><button data-rail="1" aria-label="Next">'+I.arrowR+'</button></div></div></div>' +
+    '<div class="rail-wrap"><div class="rail" id="rail">' +
+    (ns ? ns.lines.map(function(l, i){ return '<a class="col-card" href="#/catalog/'+nsIdx+'.'+i+'"><div class="ph"><img loading="lazy" src="'+esc(nodeImg(l))+'" alt=""></div><h3>'+esc(nm(l))+'</h3><p>'+esc(t('items')(count(l)))+'</p></a>'; }).join('') : '<div class="skel" style="width:400px;flex:none"></div>') +
+    '</div></div></section>';
+
+  // categories
+  h += '<section class="sec" id="cats"><div class="wrap"><div class="sec-head reveal"><div><h2>'+esc(t('catTitle'))+'</h2><p class="lead">'+esc(t('catLead'))+'</p></div><a class="textlink" href="#/catalog">'+esc(t('allCatalog'))+'</a></div>' +
+    '<div class="cats reveal">' +
+    (CAT ? CAT.map(function(c, i){ return '<a class="cat'+(i===0?' big':'')+'" href="#/catalog/'+i+'"><img loading="lazy" src="'+esc(nodeImg(c))+'" alt=""><div class="lbl">'+esc(nm(c))+'<span>'+esc(t('items')(count(c)))+'</span></div></a>'; }).join('') +
+      '<a class="cat" href="#/catalog" style="display:grid;place-items:center;text-align:center;padding:20px;aspect-ratio:auto;min-height:100%"><div><div style="font-family:var(--serif);font-size:26px;line-height:1.15">'+esc(t('allCatalog'))+'</div><div style="color:var(--muted);font-size:14px;margin-top:6px">'+esc(t('allCatalogS'))+'</div></div></a>' : '') +
+    '</div></div></section>';
+
+  // why
+  h += '<section class="sec"><div class="wrap why"><div class="why-ph reveal"><img loading="lazy" src="'+IMG('site_why.jpg')+'" alt=""></div><div class="reveal"><h2>'+esc(t('whyTitle'))+'</h2><p class="lead">'+esc(t('whyLead'))+'</p><div class="facts">' +
+    t('facts').map(function(f){ return '<div class="fact"><b>'+esc(f[0])+'</b><div><h3>'+esc(f[1])+'</h3><p>'+esc(f[2])+'</p></div></div>'; }).join('') +
+    '</div></div></div></section>';
+
+  // promos
+  var promos = (CONTENT.promos||[]).filter(function(p){ return !p.until || new Date(p.until + 'T23:59:59') >= new Date(); });
+  h += '<section class="sec" id="promos"><div class="wrap"><div class="sec-head reveal"><h2>'+esc(t('promos'))+'</h2></div>' +
+    (promos.length ? '<div class="promos">' + promos.map(function(p){ return '<a class="promo reveal" href="'+esc(p.link||'#/catalog')+'">'+(p.img?'<div class="ph"><img loading="lazy" src="'+esc(p.img)+'" alt=""></div>':'')+'<div class="bd"><h3>'+esc(loc(p.title))+'</h3><p>'+esc(loc(p.text))+'</p>'+(p.until?'<span class="until">'+(lang==='uz'? fmtDate(p.until)+' '+t('until') : t('until')+' '+fmtDate(p.until))+'</span>':'')+'</div></a>'; }).join('') + '</div>'
+      : '<div class="promo-empty reveal"><p>'+esc(t('promoEmpty'))+'</p><a class="btn btn-line" href="'+TG_CH+'" target="_blank" rel="noopener">'+I.send+esc(t('tgChannel'))+'</a></div>') +
+    '</div></section>';
+
+  // news
+  var news = (CONTENT.news||[]).slice().sort(function(a,b){ return a.date < b.date ? 1 : -1; }).slice(0,3);
+  if(news.length){
+    h += '<section class="sec" id="news"><div class="wrap"><div class="sec-head reveal"><h2>'+esc(t('news'))+'</h2><a class="textlink" href="'+TG_CH+'" target="_blank" rel="noopener">'+esc(t('allNews'))+'</a></div><div class="news">' +
+      news.map(function(n){ return '<a class="news-item reveal" href="'+esc(n.link||TG_CH)+'"'+(/^https?:/.test(n.link||TG_CH)?' target="_blank" rel="noopener"':'')+'>'+(n.img?'<div class="ph"><img loading="lazy" src="'+esc(n.img)+'" alt=""></div>':'')+'<time datetime="'+esc(n.date)+'">'+fmtDate(n.date)+'</time><h3>'+esc(loc(n.title))+'</h3><p>'+esc(loc(n.text))+'</p></a>'; }).join('') +
+      '</div></div></section>';
+  } else { h += '<div id="news"></div>'; }
+
+  // about
+  h += '<section class="about" id="company"><div class="wrap"><div class="about-top reveal"><h2>'+esc(t('aboutTitle'))+'</h2><div><p>'+esc(t('about1'))+'</p><p>'+esc(t('about2'))+'</p></div></div>' +
+    '<div class="about-ph reveal"><img loading="lazy" src="'+IMG('site_about.jpg')+'" alt=""></div>' +
+    '<ol class="tl reveal">' + t('tl').map(function(x){ return '<li><b>'+esc(x[0])+'</b><p>'+esc(x[1])+'</p></li>'; }).join('') + '</ol>' +
+    '<p class="dist reveal">'+esc(t('dist'))+'</p></div></section>';
+
+  // where
+  h += '<section class="sec" id="where"><div class="wrap"><div class="sec-head reveal"><div><h2>'+esc(t('where'))+'</h2><p class="lead">'+esc(t('whereLead'))+'</p></div></div><div class="where reveal"><div class="map" id="map"></div><div class="stores" id="stores"></div></div></div></section>';
+
+  // contacts
+  h += '<section class="sec" id="contacts"><div class="wrap contact"><div class="reveal"><h2>'+esc(t('contacts'))+'</h2><p class="lead">'+esc(t('contactsLead'))+'</p><div class="clist">' +
+    PHONES.map(function(p){ return '<a href="'+tel(p)+'">'+I.phone+'<span>'+esc(p)+'</span></a>'; }).join('') +
+    '<a href="'+TG_ADMIN+'" target="_blank" rel="noopener">'+I.send+'<span>'+esc(t('tgAdmin'))+'<small>@kukmara_admin</small></span></a>' +
+    '<a href="'+TG_CH+'" target="_blank" rel="noopener">'+I.send+'<span>'+esc(t('tgChannel'))+'<small>'+esc(t('tgS'))+'</small></span></a>' +
+    '<a href="'+YT+'" target="_blank" rel="noopener">'+I.play+'<span>YouTube<small>'+esc(t('ytS'))+'</small></span></a>' +
+    '</div></div><div class="reveal" id="cformWrap">' + contactForm() + '</div></div></section>';
+
+  document.getElementById('homePage').innerHTML = h;
+  renderStores(null);
+  observeReveal(); bindRail(); onScroll();
+}
+function contactForm(){
+  return '<form class="form" id="cform" novalidate><input type="text" name="bot-field" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+    '<div class="field"><label for="cf-n">'+esc(t('name'))+'</label><input id="cf-n" name="ism" autocomplete="name" required></div>' +
+    '<div class="field"><label for="cf-p">'+esc(t('phone'))+'</label><input id="cf-p" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998" required></div>' +
+    '<div class="field"><label for="cf-m">'+esc(t('message'))+'</label><textarea id="cf-m" name="xabar"></textarea></div>' +
+    '<button class="btn btn-red" type="submit">'+esc(t('send'))+'</button></form>';
+}
+
+var curCity = null;
+function renderStores(city){
+  curCity = city;
+  var all = CONTENT.stores || [], cities = [];
+  all.forEach(function(s){ var c = loc(s.city); if(cities.indexOf(c) < 0) cities.push(c); });
+  var shown = city ? all.filter(function(s){ return loc(s.city) === city; }) : all;
+  var el = document.getElementById('stores'); if(!el) return;
+  el.innerHTML = (cities.length > 1 ? '<div class="city-filter"><button class="chip'+(!city?' on':'')+'" data-city="">'+esc(t('allCities'))+'</button>' + cities.map(function(c){ return '<button class="chip'+(c===city?' on':'')+'" data-city="'+esc(c)+'">'+esc(c)+'</button>'; }).join('') + '</div>' : '') +
+    shown.map(function(s, i){ var idx = all.indexOf(s); return '<div class="store'+(i===0?' on':'')+'" data-store="'+idx+'" tabindex="0"><h3>'+esc(loc(s.name))+'</h3><p class="addr">'+esc(loc(s.city))+', '+esc(loc(s.address))+'</p>' +
+      '<div class="meta">'+(s.hours?'<div>'+esc(t('hours'))+': '+esc(loc(s.hours))+'</div>':'')+(s.phones||[]).map(function(p){ return '<a href="'+tel(p)+'">'+esc(p)+'</a>'; }).join('')+'</div>' +
+      '<div class="acts">'+(s.route?'<a class="btn btn-red" href="'+esc(s.route)+'" target="_blank" rel="noopener">'+I.pin+esc(t('route'))+'</a>':'')+((s.phones&&s.phones[0])?'<a class="btn btn-line" href="'+tel(s.phones[0])+'">'+esc(t('call'))+'</a>':'')+'</div></div>'; }).join('');
+  if(shown[0]) setMap(shown[0]);
+}
+function setMap(s){
+  var m = document.getElementById('map'); if(!m) return;
+  var src = s.lat && s.lon ? 'https://yandex.uz/map-widget/v1/?ll='+s.lon+'%2C'+s.lat+'&z=16&pt='+s.lon+'%2C'+s.lat+'%2Cpm2rdm' : 'https://yandex.uz/map-widget/v1/?text='+encodeURIComponent(s.mapQuery || (loc(s.city)+', '+loc(s.address)))+'&z=16';
+  m.innerHTML = '<iframe loading="lazy" title="'+esc(loc(s.name))+'" src="'+src+'" allowfullscreen></iframe>';
+}
+
+/* ---------- catalog ---------- */
+var PAGE = 48, curPath = null, curQ = '', shownN = PAGE;
+function hashFor(path, q){ return '#/catalog' + (path ? '/' + path : '') + (q ? '?q=' + encodeURIComponent(q) : ''); }
+
+function renderCatalog(path, q){
+  curPath = path || ''; curQ = q || ''; shownN = PAGE;
+  var n = node(curPath), ch = curPath ? chain(curPath) : [];
+  var crumbs = '<nav class="crumbs" aria-label="breadcrumbs"><a href="#/">Kukmara</a><span class="sep">/</span><a href="#/catalog">'+esc(t('catalog'))+'</a>' +
+    ch.slice(0, -1).map(function(c){ return '<span class="sep">/</span><a href="#/catalog/'+c.path+'">'+esc(nm(c.n))+'</a>'; }).join('') + '</nav>';
+  var top = curPath ? curPath.split('.')[0] : null;
+  var tree = (CAT||[]).map(function(c, i){
+    var s = '<a href="#/catalog/'+i+'" class="'+(curPath===String(i)?'on':'')+'">'+esc(nm(c))+'</a>';
+    if(String(i) === top && kids(c).length){ s += '<div class="sub">' + kids(c).map(function(k, j){ var p = i+'.'+j; return '<a href="#/catalog/'+p+'" class="'+(curPath===p||curPath.indexOf(p+'.')===0?'on':'')+'">'+esc(nm(k))+'</a>'; }).join('') + '</div>'; }
+    return s;
+  }).join('');
+  var html = '<div class="wrap"><div class="cat-head">'+crumbs+'<h1>'+esc(n ? nm(n) : t('catalog'))+'</h1>' +
+    '<div class="search">'+I.search+'<input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="'+esc(t('search'))+'" value="'+esc(curQ)+'"><button class="clr'+(curQ?' show':'')+'" id="qclr" aria-label="Clear">'+I.x+'</button></div></div>' +
+    '<div class="cat-body"><aside class="tree">'+tree+'</aside><div id="cres"></div></div></div>';
+  document.getElementById('catalogPage').innerHTML = html;
+  renderResults();
+  document.title = (n ? nm(n) + ' — ' : '') + 'Kukmara ' + t('catalog');
+}
+
+var CYR = [['shch','щ'],['sh','ш'],['ch','ч'],['ya','я'],['yu','ю'],['yo','ё'],['zh','ж'],['ts','ц'],['a','а'],['b','б'],['v','в'],['g','г'],['d','д'],['e','е'],['j','ж'],['z','з'],['i','и'],['y','й'],['k','к'],['l','л'],['m','м'],['n','н'],['o','о'],['p','п'],['r','р'],['s','с'],['t','т'],['u','у'],['f','ф'],['x','х'],['h','х'],['c','к'],['q','к'],['w','в']];
+function toCyr(s){ var out = s; CYR.forEach(function(p){ out = out.split(p[0]).join(p[1]); }); return out; }
+function search(q){
+  q = q.toLowerCase().replace(/ё/g,'е').trim(); if(!q) return [];
+  var words = q.split(/\s+/), alt = words.map(toCyr);
+  return PRODUCTS.filter(function(p){ return words.every(function(w, i){ return p.hay.indexOf(w) >= 0 || p.hay.indexOf(alt[i]) >= 0; }); });
+}
+function prodCard(p){ return '<a class="prod" href="#/p/'+p.id+'"><div class="ph"><img loading="lazy" src="'+esc(p.img)+'" alt=""></div><div class="bd"><div class="nm">'+esc(prodName(p))+'</div><div class="art">'+esc(p.art && p.art !== '—' ? p.art : '')+'</div></div></a>'; }
+
+function renderResults(){
+  var el = document.getElementById('cres'); if(!el) return;
+  var h = '';
+  if(curQ.trim().length >= 2){
+    var r = search(curQ);
+    h = r.length ? '<p class="count">'+esc(t('found')(r.length))+'</p><div class="grid">' + r.slice(0, shownN).map(prodCard).join('') + '</div>' + (r.length > shownN ? '<div class="more"><button class="btn btn-line" data-more>'+esc(t('showMore'))+'</button></div>' : '')
+      : '<div class="empty">'+esc(t('nothing'))+'</div>';
+  } else {
+    var n = node(curPath);
+    var children = n ? kids(n) : (CAT||[]);
+    if(n){
+      var inf = n.info && (n.info[lang==='en'?'ru':lang] || n.info.ru);
+      if(inf && (inf.desc || (inf.specs && inf.specs.length))) h += '<details class="info-box"><summary>'+esc(t('about'))+I.down+'</summary>'+(inf.desc?'<p>'+esc(lang==='uz'?uzfix(inf.desc):inf.desc)+'</p>':'')+(inf.specs?'<ul>'+inf.specs.map(function(s){ return '<li>'+esc(lang==='uz'?uzfix(s):s)+'</li>'; }).join('')+'</ul>':'')+'</details>';
+    }
+    if(children.length) h += '<div class="tiles">' + children.map(function(k, i){ var p = (curPath ? curPath + '.' : '') + i; return '<a class="tile" href="#/catalog/'+p+'"><div class="ph"><img loading="lazy" src="'+esc(nodeImg(k))+'" alt=""></div><h3>'+esc(nm(k))+'</h3><p>'+esc(t('items')(count(k)))+'</p></a>'; }).join('') + '</div>';
+    if(n && n.skus && n.skus.length){
+      var ps = PRODUCTS.filter(function(p){ return p.path === curPath; });
+      h += (children.length ? '<div style="height:40px"></div>' : '') + '<p class="count">'+esc(t('items')(ps.length))+'</p><div class="grid">' + ps.slice(0, shownN).map(prodCard).join('') + '</div>' + (ps.length > shownN ? '<div class="more"><button class="btn btn-line" data-more>'+esc(t('showMore'))+'</button></div>' : '');
+    }
+  }
+  el.innerHTML = h;
+}
+
+/* ---------- product sheet ---------- */
+var openedInApp = false;
+function openProduct(id){
+  var p = BYID[id]; if(!p) return;
+  var ch = chain(p.path), inf = infoOf(p.path), inL = list.some(function(x){ return x.id === id; });
+  var rel = PRODUCTS.filter(function(x){ return x.path === p.path && x.id !== id; }).slice(0, 4);
+  var h = '<div class="sheet-top"><span></span><button class="icon-btn" data-close aria-label="'+esc(t('close'))+'">'+I.x+'</button></div>' +
+    '<div class="pv-img" data-zoom="'+esc(p.img)+'"><img src="'+esc(p.img)+'" alt="'+esc(prodName(p))+'"></div>' +
+    '<div class="pv-path">' + ch.map(function(c){ return '<a href="#/catalog/'+c.path+'">'+esc(nm(c.n))+'</a>'; }).join(' / ') + '</div>' +
+    '<h2 class="pv-name">'+esc(prodName(p))+'</h2>' +
+    '<dl class="pv-meta">'+(p.art && p.art !== '—' ? '<dt>'+esc(t('article'))+'</dt><dd>'+esc(p.art)+'</dd>' : '')+'<dt>'+esc(t('collection'))+'</dt><dd>'+esc(nm(ch[ch.length-1].n))+'</dd></dl>' +
+    '<div class="pv-acts"><button class="btn '+(inL?'btn-line':'btn-red')+'" data-add="'+id+'">'+(inL? I.check + esc(t('inList')) : esc(t('addList')))+'</button>' +
+    '<div class="row"><button class="btn btn-line" data-ask="'+id+'">'+I.send+esc(t('askPrice'))+'</button><a class="btn btn-line" href="'+tel(PHONES[0])+'">'+I.phone+esc(t('call'))+'</a></div></div>' +
+    (inf && inf.specs && inf.specs.length ? '<div class="pv-specs"><h3>'+esc(t('specs'))+'</h3><ul>'+inf.specs.map(function(s){ return '<li>'+esc(lang==='uz'?uzfix(s):s)+'</li>'; }).join('')+'</ul></div>' : '') +
+    (rel.length ? '<div class="pv-rel"><h3>'+esc(t('related'))+'</h3><div class="grid">'+rel.map(prodCard).join('')+'</div></div>' : '');
+  var el = document.getElementById('pv'); el.innerHTML = h; el.scrollTop = 0;
+  openSheet('pv');
+  document.title = prodName(p) + ' — Kukmara';
+}
+function openSheet(id){ closeSheets(true); document.getElementById(id).classList.add('open'); document.getElementById('ov').classList.add('open'); document.documentElement.style.overflow = 'hidden'; }
+function closeSheets(silent){ ['pv','rl'].forEach(function(i){ document.getElementById(i).classList.remove('open'); }); document.getElementById('ov').classList.remove('open'); document.documentElement.style.overflow = ''; }
+function closeProduct(){
+  var id = (location.hash.match(/^#\/p\/(.+)$/)||[])[1];
+  if(!id){ closeSheets(); return; }
+  if(openedInApp){ history.back(); } else { var p = BYID[id]; location.hash = hashFor(p ? p.path : ''); }
+}
+
+/* ---------- request list ---------- */
+function saveList(){ store.set('kk_list', JSON.stringify(list)); updateBadge(); }
+function addToList(id){ var it = list.filter(function(x){ return x.id === id; })[0]; if(it) it.qty++; else list.push({id:id, qty:1, art:BYID[id].art}); saveList(); toast(t('added')); }
+function listText(){ return t('listText') + '\n' + list.map(function(x, i){ var p = BYID[x.id]; return (i+1) + '. ' + (p ? prodName(p) : x.id) + (p && p.art && p.art !== '—' ? ' (' + p.art + ')' : '') + ' — ' + x.qty + ' ' + t('pcs'); }).join('\n'); }
+function renderList(){
+  var el = document.getElementById('rl');
+  list = list.filter(function(x){ return BYID[x.id]; });
+  var h = '<div class="sheet-top"><h2>'+esc(t('listTitle'))+'</h2><button class="icon-btn" data-close aria-label="'+esc(t('close'))+'">'+I.x+'</button></div>';
+  if(!list.length){
+    h += '<div class="list-empty"><p>'+esc(t('listEmpty'))+'</p><div style="margin-bottom:22px">'+esc(t('listEmptyS'))+'</div><a class="btn btn-red" href="#/catalog" data-close>'+esc(t('openCatalog'))+'</a></div>';
+  } else {
+    h += list.map(function(x){ var p = BYID[x.id]; return '<div class="ritem"><img src="'+esc(p.img)+'" alt=""><div><div class="nm">'+esc(prodName(p))+'</div><div class="art">'+esc(p.art && p.art!=='—'?p.art:'')+'</div><div class="qty"><button data-q="'+x.id+'" data-d="-1" aria-label="-">'+I.minus+'</button><span>'+x.qty+'</span><button data-q="'+x.id+'" data-d="1" aria-label="+">'+I.plus+'</button><button class="rm" data-rm="'+x.id+'">'+esc(t('remove'))+'</button></div></div></div>'; }).join('');
+    h += '<form class="form list-form" id="lform" novalidate><p class="note">'+esc(t('listNote'))+'</p><input type="text" name="bot-field" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<div class="field"><label for="lf-n">'+esc(t('name'))+'</label><input id="lf-n" name="ism" autocomplete="name" required></div>' +
+      '<div class="field"><label for="lf-p">'+esc(t('phone'))+'</label><input id="lf-p" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998" required></div>' +
+      '<div class="field"><label for="lf-c">'+esc(t('city'))+'</label><input id="lf-c" name="shahar" autocomplete="address-level2"></div>' +
+      '<div class="field"><label for="lf-k">'+esc(t('comment'))+'</label><textarea id="lf-k" name="izoh"></textarea></div>' +
+      '<button class="btn btn-red" type="submit">'+esc(t('sendRequest'))+'</button><button class="btn btn-line" type="button" data-listtg>'+I.send+esc(t('sendTg'))+'</button></form>';
+  }
+  el.innerHTML = h;
+}
+function openList(){ renderList(); openSheet('rl'); }
+
+/* ---------- forms ---------- */
+function submitNetlify(formName, data){
+  var body = new URLSearchParams(); body.append('form-name', formName);
+  Object.keys(data).forEach(function(k){ body.append(k, data[k]); });
+  return fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body.toString()}).then(function(r){ if(!r.ok) throw new Error('status ' + r.status); });
+}
+function copyAndOpenTg(text){
+  var done = function(){ toast(t('copied')); window.open(TG_ADMIN, '_blank', 'noopener'); };
+  if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done); else done();
+}
+function handleForm(form, formName, extra, onOk){
+  var fd = new FormData(form), data = {};
+  fd.forEach(function(v, k){ data[k] = v; });
+  if(data['bot-field']) return;
+  if(!String(data.ism||'').trim() || String(data.telefon||'').replace(/\D/g,'').length < 7){ toast(t('required')); return; }
+  Object.keys(extra||{}).forEach(function(k){ data[k] = extra[k]; });
+  data.til = lang;
+  var btn = form.querySelector('[type=submit]'); btn.disabled = true; btn.textContent = t('sending');
+  submitNetlify(formName, data).then(onOk, function(){
+    var txt = (formName === 'sorov' ? listText() : (data.xabar||'')) + '\n\n' + data.ism + ', ' + data.telefon + (data.shahar ? ', ' + data.shahar : '') + (data.izoh ? '\n' + data.izoh : '');
+    btn.disabled = false; btn.textContent = t(formName === 'sorov' ? 'sendRequest' : 'send');
+    copyAndOpenTg(txt);
+  });
+}
+
+/* ---------- misc ui ---------- */
+var toastTimer;
+function toast(msg){ var el = document.getElementById('toast'); el.textContent = msg; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2600); }
+var io;
+function observeReveal(){
+  if(!('IntersectionObserver' in window)){ document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); }); return; }
+  if(io) io.disconnect();
+  io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(function(e){ io.observe(e); });
+}
+function bindRail(){ var r = document.getElementById('rail'); if(!r) return; document.querySelectorAll('[data-rail]').forEach(function(b){ b.onclick = function(){ r.scrollBy({left:(+b.getAttribute('data-rail')) * Math.min(r.clientWidth * .8, 840), behavior:'smooth'}); }; }); }
+var ticking = false, reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+function onScroll(){
+  if(ticking) return; ticking = true;
+  requestAnimationFrame(function(){
+    ticking = false;
+    var y = window.scrollY, onHome = !document.body.classList.contains('route-catalog');
+    document.getElementById('hdr').classList.toggle('solid', y > 8 || !onHome);
+    var st = document.getElementById('heroStick');
+    if(onHome && st && !reduce){
+      var hero = st.parentNode, max = hero.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, y / (max * .85)));
+      st.style.setProperty('--p', p.toFixed(4));
+    }
+    if(onHome){
+      var cur = '';
+      ['collections','company','news','where','contacts'].forEach(function(id){ var e = document.getElementById(id); if(e && e.getBoundingClientRect().top < window.innerHeight * .4) cur = id; });
+      document.querySelectorAll('#nav a').forEach(function(a){ a.classList.toggle('on', !!cur && a.getAttribute('data-sec') === cur); });
+    } else {
+      document.querySelectorAll('#nav a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#/catalog'); });
+    }
+  });
+}
+function closeMenu(){ var m = document.getElementById('menu'); m.classList.remove('open'); m.setAttribute('aria-hidden','true'); if(!document.querySelector('.sheet.open')) document.documentElement.style.overflow = ''; }
+
+/* ---------- router ---------- */
+var lastView = null, lastCatKey = null;
+function route(){
+  var h = location.hash || '#/';
+  closeMenu();
+  var m;
+  if((m = h.match(/^#\/p\/(.+)$/))){
+    var p = BYID[decodeURIComponent(m[1])];
+    if(!CAT){ return; }
+    if(lastView !== 'catalog'){ showView('catalog'); renderCatalog(p ? p.path : '', ''); lastCatKey = hashFor(p ? p.path : ''); }
+    if(p) openProduct(p.id); return;
+  }
+  closeSheets();
+  if((m = h.match(/^#\/catalog(?:\/([\d.]+))?(?:\?q=(.*))?$/))){
+    showView('catalog');
+    var key = hashFor(m[1]||'', m[2] ? decodeURIComponent(m[2]) : '');
+    if(key !== lastCatKey){ if(CAT) renderCatalog(m[1]||'', m[2] ? decodeURIComponent(m[2]) : ''); lastCatKey = key; window.scrollTo(0,0); }
+    document.getElementById('nav') && onScroll();
+    return;
+  }
+  var wasCat = lastView === 'catalog';
+  showView('home'); lastCatKey = null;
+  document.title = 'Kukmara O‘zbekiston — ' + t('heroTitle').toLowerCase();
+  if((m = h.match(/^#\/s\/(\w+)$/))){
+    var target = document.getElementById(m[1]);
+    if(target) setTimeout(function(){ target.scrollIntoView({behavior: (reduce||wasCat) ? 'auto' : 'smooth', block:'start'}); }, wasCat ? 30 : 0);
+  } else if(wasCat){ window.scrollTo(0,0); }
+}
+function showView(v){ document.body.classList.toggle('route-catalog', v === 'catalog'); lastView = v; onScroll(); }
+
+/* ---------- events ---------- */
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a,button,[data-store],[data-zoom]'); if(!a) return;
+  if(a.hasAttribute('data-setlang')){ setLang(a.getAttribute('data-setlang')); return; }
+  var act = a.getAttribute('data-act');
+  if(act === 'menu'){ var mm = document.getElementById('menu'); mm.classList.add('open'); mm.setAttribute('aria-hidden','false'); document.documentElement.style.overflow = 'hidden'; return; }
+  if(act === 'menu-close'){ closeMenu(); return; }
+  if(act === 'list'){ openList(); return; }
+  if(act === 'fab'){ document.getElementById('fab').classList.toggle('open'); return; }
+  if(act === 'search'){ if(lastView !== 'catalog') location.hash = '#/catalog'; setTimeout(function(){ var q = document.getElementById('q'); if(q){ q.focus(); q.scrollIntoView({block:'center'}); } }, 60); return; }
+  if(a.hasAttribute('data-close')){ if(document.getElementById('pv').classList.contains('open')) closeProduct(); else closeSheets(); if(a.tagName !== 'A') return; }
+  if(a.getAttribute('href') && /^#\/p\//.test(a.getAttribute('href'))){ openedInApp = true; }
+  if(a.hasAttribute('data-add')){ var id = a.getAttribute('data-add'); if(!list.some(function(x){ return x.id === id; })) addToList(id); openProduct(id); return; }
+  if(a.hasAttribute('data-ask')){ var p = BYID[a.getAttribute('data-ask')]; copyAndOpenTg(t('askText') + '\n' + prodName(p) + (p.art && p.art !== '—' ? '\n' + t('article') + ': ' + p.art : '')); return; }
+  if(a.hasAttribute('data-zoom')){ var lb = document.getElementById('lb'); lb.querySelector('img').src = a.getAttribute('data-zoom'); lb.classList.add('open'); return; }
+  if(a.hasAttribute('data-q')){ var it = list.filter(function(x){ return x.id === a.getAttribute('data-q'); })[0]; if(it){ it.qty = Math.max(1, it.qty + (+a.getAttribute('data-d'))); saveList(); renderList(); } return; }
+  if(a.hasAttribute('data-rm')){ list = list.filter(function(x){ return x.id !== a.getAttribute('data-rm'); }); saveList(); renderList(); return; }
+  if(a.hasAttribute('data-listtg')){ copyAndOpenTg(listText()); return; }
+  if(a.hasAttribute('data-more')){ shownN += PAGE; renderResults(); return; }
+  if(a.hasAttribute('data-city')){ renderStores(a.getAttribute('data-city') || null); return; }
+  if(a.hasAttribute('data-store')){ var s = CONTENT.stores[+a.getAttribute('data-store')]; document.querySelectorAll('.store').forEach(function(x){ x.classList.toggle('on', x === a); }); setMap(s); return; }
+  if(a.id === 'qclr'){ var q = document.getElementById('q'); q.value = ''; onQuery(''); q.focus(); return; }
+  if(a.getAttribute('href') === location.hash && /^#\/s\//.test(location.hash)){ e.preventDefault(); route(); }
+});
+document.getElementById('ov').addEventListener('click', function(){ if(document.getElementById('pv').classList.contains('open')) closeProduct(); else closeSheets(); });
+document.getElementById('lb').addEventListener('click', function(){ this.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ var lb = document.getElementById('lb'); if(lb.classList.contains('open')){ lb.classList.remove('open'); return; } if(document.getElementById('pv').classList.contains('open')) closeProduct(); else { closeSheets(); closeMenu(); } } });
+document.addEventListener('click', function(e){ if(!e.target.closest('#fab')) document.getElementById('fab').classList.remove('open'); });
+var qTimer;
+function onQuery(v){ curQ = v; shownN = PAGE; document.getElementById('qclr').classList.toggle('show', !!v); var k = hashFor(curPath, v.trim().length >= 2 ? v.trim() : ''); history.replaceState(null, '', k); lastCatKey = k; renderResults(); }
+document.addEventListener('input', function(e){ if(e.target.id === 'q'){ clearTimeout(qTimer); var v = e.target.value; qTimer = setTimeout(function(){ onQuery(v); }, 160); } });
+document.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(e.target.id === 'cform'){ handleForm(e.target, 'murojaat', {}, function(){ document.getElementById('cformWrap').innerHTML = '<div class="form-ok">'+esc(t('sent'))+'</div>'; }); }
+  if(e.target.id === 'lform'){ handleForm(e.target, 'sorov', {royxat: listText()}, function(){ list = []; saveList(); document.getElementById('rl').innerHTML = '<div class="sheet-top"><h2>'+esc(t('listTitle'))+'</h2><button class="icon-btn" data-close>'+I.x+'</button></div><div class="form-ok">'+esc(t('sent'))+'</div>'; }); }
+});
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', onScroll);
+window.addEventListener('hashchange', route);
+
+function setLang(l){
+  if(!T[l] || l === lang) return; lang = l; store.set('kk_lang', l);
+  var y = window.scrollY;
+  renderChrome(); renderHome();
+  if(lastView === 'catalog' && CAT){ renderCatalog(curPath, curQ); }
+  document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
+  if(document.getElementById('pv').classList.contains('open')){ var m = location.hash.match(/^#\/p\/(.+)$/); if(m) openProduct(decodeURIComponent(m[1])); }
+  if(document.getElementById('rl').classList.contains('open')) renderList();
+  window.scrollTo(0, y); route();
+}
+
+/* ---------- boot ---------- */
+renderChrome(); renderHome(); route();
+var bust = '?v=' + Math.floor(Date.now() / 300000);
+Promise.all([
+  fetch(RAW + 'site/catalog.json' + bust).then(function(r){ return r.json(); }),
+  fetch(RAW + 'site/content.json' + bust).then(function(r){ return r.json(); }).catch(function(){ return null; })
+]).then(function(res){
+  CAT = res[0]; if(res[1]) CONTENT = res[1];
+  indexCatalog();
+  var y = window.scrollY;
+  renderHome(); window.scrollTo(0, y);
+  lastCatKey = null; route();
+}).catch(function(){ toast('Katalog yuklanmadi. Sahifani yangilang.'); });
+})();
+
+</script>
+</body>
+</html>
