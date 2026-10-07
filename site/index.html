@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kukmara O‘zbekiston — quyma alyuminiy idishlar</title>
 <meta name="description" content="Kukmara idishlarining O‘zbekistondagi rasmiy distribyutori. Qozonlar, skovorodkalar, jarovnyalar va boshqa quyma alyuminiy idishlar katalogi.">
-<meta name="theme-color" content="#FFFDF8">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:title" content="Kukmara O‘zbekiston">
 <meta property="og:description" content="Avloddan avlodga o‘tadigan idishlar. Rasmiy distribyutor.">
-<meta property="og:image" content="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/hs_1_nabor.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_og.jpg">
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_favicon.png">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#FFFDF8; --cream:#FAF3E6; --ink:#3A2F24; --muted:#7A6B5B; --red:#E1001A; --red-h:#B80015; --line:#ECDFC8;
+  --bg:#FFFFFF; --cream:#F7F3EC; --ink:#3A2F24; --muted:#7A6B5B; --red:#E1001A; --red-h:#B80015; --line:#ECDFC8;
   --serif:'Lora', Georgia, 'Times New Roman', serif;
   --sans:'Golos Text', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --wrap:1240px; --pad:clamp(20px, 5vw, 56px);
@@ -49,11 +49,11 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 
 /* header */
 .hdr{position:fixed; inset:0 0 auto 0; z-index:50; padding-top:env(safe-area-inset-top, 0px); transition:background .3s, box-shadow .3s;}
-.hdr.solid{background:rgba(255,253,248,.82); -webkit-backdrop-filter:saturate(1.4) blur(16px); backdrop-filter:saturate(1.4) blur(16px); box-shadow:0 1px 0 var(--line);}
+.hdr.solid{background:rgba(255,255,255,.88); -webkit-backdrop-filter:saturate(1.4) blur(16px); backdrop-filter:saturate(1.4) blur(16px); box-shadow:0 1px 0 var(--line);}
 .hdr-in{height:var(--hdr); display:flex; align-items:center; gap:28px;}
 .logo{display:block; flex:none;}
-.logo img{height:38px; width:auto;}
-@media (max-width:700px){ .logo img{height:32px;} }
+.logo img{height:36px; width:auto;}
+@media (max-width:700px){ .logo img{height:30px;} }
 .nav{display:flex; gap:26px; margin:0 auto; font-size:15px;}
 .nav a{text-decoration:none; color:var(--muted); padding:6px 0; position:relative; transition:color .2s;}
 .nav a:hover, .nav a.on{color:var(--ink);}
@@ -130,12 +130,9 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .cat{position:relative; display:block; text-decoration:none; border-radius:18px; overflow:hidden; background:var(--cream); aspect-ratio:1/1;}
 .cat img{width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
 .cat:hover img{transform:scale(1.04);}
-.cat .lbl{position:absolute; left:0; right:0; bottom:0; padding:44px 18px 16px; color:#fff; background:linear-gradient(to top, rgba(30,22,14,.62), rgba(30,22,14,0)); font-weight:500; font-size:16px; line-height:1.3;}
-.cat .lbl span{display:block; font-weight:400; font-size:13px; opacity:.8; margin-top:2px;}
-.cat.big{grid-column:span 2; grid-row:span 2; aspect-ratio:auto;}
-.cat.big .lbl{font-family:var(--serif); font-weight:400; font-size:clamp(24px,2.6vw,34px); padding:80px 26px 24px;}
-.cat.big .lbl span{font-family:var(--sans); font-size:14px;}
-@media (max-width:900px){ .cats{grid-template-columns:repeat(2,1fr); gap:12px;} .cat.big{grid-row:span 1; aspect-ratio:4/3;} }
+.cat .lbl{position:absolute; left:0; right:0; bottom:0; min-height:46%; display:flex; flex-direction:column; justify-content:flex-end; padding:20px 18px 16px; color:#fff; background:linear-gradient(to top, rgba(30,22,14,.66), rgba(30,22,14,0)); font-family:var(--serif); font-size:clamp(17px,1.5vw,21px); line-height:1.2;}
+.cat .lbl span{display:block; font-family:var(--sans); font-size:13px; opacity:.85; margin-top:4px;}
+@media (max-width:900px){ .cats{grid-template-columns:repeat(2,1fr); gap:12px;} }
 
 /* why */
 .why{display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(32px,6vw,90px); align-items:center;}
@@ -171,7 +168,7 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 @media (max-width:900px){ .news{grid-template-columns:1fr;} .news-item:nth-child(n+2) .ph{display:none;} }
 
 /* about / timeline */
-.about{background:var(--cream); padding:clamp(80px,11vw,150px) 0; margin-top:clamp(80px,11vw,150px);}
+.about{background:var(--bg); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:clamp(80px,11vw,150px) 0; margin-top:clamp(80px,11vw,150px);}
 .about-top{display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,6vw,90px); align-items:end;}
 .about-top p{margin:0; font-size:clamp(16px,1.4vw,18px); color:var(--muted);}
 .about-top p + p{margin-top:14px;}
@@ -180,7 +177,7 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .tl{list-style:none; margin:clamp(40px,5vw,64px) 0 0; padding:0; display:grid; grid-template-columns:repeat(5,1fr); gap:24px; position:relative;}
 .tl::before{content:""; position:absolute; left:0; right:0; top:9px; height:1px; background:#D9C8AA;}
 .tl li{position:relative; padding-top:36px;}
-.tl li::before{content:""; position:absolute; top:4px; left:0; width:11px; height:11px; border-radius:50%; background:var(--cream); border:1px solid var(--ink);}
+.tl li::before{content:""; position:absolute; top:4px; left:0; width:11px; height:11px; border-radius:50%; background:var(--bg); border:1px solid var(--ink);}
 .tl li:last-child::before{background:var(--red); border-color:var(--red);}
 .tl b{font-family:var(--serif); font-weight:400; font-size:32px; line-height:1; display:block;}
 .tl p{margin:10px 0 0; font-size:15px; color:var(--muted);}
@@ -225,10 +222,16 @@ h2{font-size:clamp(34px, 4.6vw, 60px); line-height:1.06;}
 .form-ok{background:var(--cream); border-radius:18px; padding:28px; font-family:var(--serif); font-size:24px; line-height:1.3;}
 @media (max-width:900px){ .contact{grid-template-columns:1fr;} }
 
+/* contacts with faded photo */
+.contact-sec{position:relative; isolation:isolate; margin-top:clamp(80px,11vw,150px); padding:clamp(70px,9vw,120px) 0;}
+.contact-sec::before{content:""; position:absolute; inset:0; z-index:-1; background:url(https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/hs_3_kazan.jpg) center 60%/cover no-repeat; opacity:.13;}
+.contact-sec .clist a{border-color:rgba(58,47,36,.14);}
+body:not(.route-catalog) .ftr{margin-top:0;}
+
 /* footer */
 .ftr{margin-top:clamp(80px,11vw,150px); border-top:1px solid var(--line); padding:48px 0 calc(env(safe-area-inset-bottom,0px) + 40px); font-size:14px; color:var(--muted);}
 .ftr-in{display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; align-items:flex-start;}
-.ftr img{height:46px; width:auto;}
+.ftr img{height:44px; width:auto;}
 .ftr nav{display:flex; flex-wrap:wrap; gap:10px 24px;}
 .ftr nav a{text-decoration:none;}
 .ftr nav a:hover{color:var(--ink);}
@@ -281,8 +284,8 @@ body.route-catalog #catalogPage{display:block;}
 .prod .ph{aspect-ratio:1/1; background:#fff; padding:10px;}
 .prod .ph img{width:100%; height:100%; object-fit:contain;}
 .prod .bd{padding:12px 14px 16px; border-top:1px solid var(--line); flex:1; display:flex; flex-direction:column;}
-.prod .nm{font-size:14.5px; line-height:1.4; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
-.prod .art{margin-top:auto; padding-top:8px; font-size:13px; color:var(--muted);}
+.prod .nm{font-size:14.5px; line-height:1.4; height:calc(1.4em * 3); display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+.prod .art{margin-top:auto; padding-top:8px; font-size:13px; color:var(--muted); min-height:1.6em;}
 .empty{padding:48px 0; color:var(--muted); font-size:18px;}
 .count{color:var(--muted); font-size:15px; margin:0 0 18px;}
 .more{display:flex; justify-content:center; margin-top:28px;}
@@ -365,7 +368,7 @@ body.route-catalog #catalogPage{display:block;}
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr-in">
-    <a class="logo" href="#/" aria-label="Kukmara"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="142" height="38"></a>
+    <a class="logo" href="#/" aria-label="Kukmara"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo_red.png" alt="Kukmara" width="144" height="36"></a>
     <nav class="nav" id="nav"></nav>
     <div class="tools">
       <button class="icon-btn" data-act="search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
@@ -378,7 +381,7 @@ body.route-catalog #catalogPage{display:block;}
 
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu-top">
-    <a class="logo" href="#/"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="142" height="38"></a>
+    <a class="logo" href="#/"><img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo_red.png" alt="Kukmara" width="144" height="36"></a>
     <button class="icon-btn" data-act="menu-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <nav id="mnav"></nav>
@@ -391,7 +394,7 @@ body.route-catalog #catalogPage{display:block;}
 <footer class="ftr">
   <div class="wrap">
     <div class="ftr-in">
-      <img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo.png" alt="Kukmara — Сделано в России" width="172" height="46">
+      <img src="https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/site_logo_red.png" alt="Kukmara" width="176" height="44">
       <nav id="fnav"></nav>
     </div>
     <div class="copy" id="copy"></div>
@@ -425,7 +428,7 @@ uz:{
   heroCap:'Kukmor zavodi idishlari', heroCapS:'1950-yildan beri quyma alyuminiy',
   openCatalog:'Katalogni ochish', whereBuy:'Qayerdan sotib olish',
   colLead:'Har bir kolleksiya — o‘z qoplamasi va xarakteriga ega quyma idishlar oilasi.',
-  catTitle:'Nima qidiryapsiz?', catLead:'Qozonlardan pichoqlargacha — barcha mahsulotlar bo‘limlarga ajratilgan.',
+  catTitle:'Bo‘limlar', catLead:'Qozonlardan pichoqlargacha — barcha mahsulotlar bo‘limlarga ajratilgan.',
   allCatalog:'Butun katalog', allCatalogS:'700 dan ortiq mahsulot',
   items:function(n){ return n + ' ta mahsulot'; },
   whyTitle:'Nega aynan Kukmara',
@@ -465,7 +468,7 @@ ru:{
   heroCap:'Посуда Кукморского завода', heroCapS:'Литой алюминий с 1950 года',
   openCatalog:'Открыть каталог', whereBuy:'Где купить',
   colLead:'Каждая коллекция — семья литой посуды со своим покрытием и характером.',
-  catTitle:'Что вы ищете?', catLead:'От казанов до ножей — весь ассортимент разложен по разделам.',
+  catTitle:'Разделы', catLead:'От казанов до ножей — весь ассортимент разложен по разделам.',
   allCatalog:'Весь каталог', allCatalogS:'Более 700 товаров',
   items:function(n){ var m=n%10, h=n%100; return n + (m===1&&h!==11?' товар':(m>=2&&m<=4&&(h<12||h>14))?' товара':' товаров'); },
   whyTitle:'Почему Kukmara',
@@ -505,7 +508,7 @@ en:{
   heroCap:'Made at the Kukmor factory', heroCapS:'Cast aluminium since 1950',
   openCatalog:'Open the catalogue', whereBuy:'Where to buy',
   colLead:'Each collection is a family of cast cookware with its own coating and character.',
-  catTitle:'What are you looking for?', catLead:'From kazans to knives — everything is sorted into sections.',
+  catTitle:'Departments', catLead:'From kazans to knives — everything is sorted into sections.',
   allCatalog:'Full catalogue', allCatalogS:'Over 700 products',
   items:function(n){ return n + (n===1?' product':' products'); },
   whyTitle:'Why Kukmara',
@@ -616,17 +619,20 @@ function fmtDate(d){ var x = new Date(d + 'T00:00:00'); if(isNaN(x)) return esc(
 
 var SLIDES = [
   {img:'hs_1_nabor.jpg', path:'0.1.7', pos:'50% 55%'},
-  {img:'hs_2_granit.jpg', path:'0.0.3', pos:'50% 60%'},
-  {img:'hs_3_kazan.jpg', path:'0.1.0', pos:'50% 60%'},
+  {img:'hs_7_storage.jpg', path:'7', pos:'50% 55%'},
+  {img:'cover_teapots3.jpg', path:'6.1', pos:'50% 50%'},
   {img:'hs_4_trendy.jpg', path:'0.2.0', pos:'50% 60%'},
-  {img:'hs_5_skovoroda.jpg', path:'0.1.1', pos:'45% 60%'},
-  {img:'hs_6_blinnitsa.jpg', path:'0.1.2', pos:'40% 55%'}
-];
+  {img:'cover_frenchpress3.jpg', path:'6.0', pos:'50% 45%'},
+  {img:'cover_tourism2.jpg', path:'10', pos:'50% 55%'},
+  {img:'cover_appliances.jpg', path:'4', pos:'50% 50%'},
+  {img:'cover_accessories.jpg', path:'3', pos:'50% 50%'}
+]
 var heroIdx = 0, heroTimer = null, HERO_MS = 6500;
 function heroCapHtml(i){
   var ch = CAT ? chain(SLIDES[i].path) : [];
-  if(ch.length < 3 || !ch[2].n) return '';
-  return '<b>'+esc(nm(ch[1].n))+'</b><span>'+esc(nm(ch[2].n))+'</span>';
+  if(!ch.length || !ch[ch.length-1].n) return '';
+  if(ch.length >= 3) return '<b>'+esc(nm(ch[1].n))+'</b><span>'+esc(nm(ch[2].n))+'</span>';
+  return '<b>'+esc(nm(ch[ch.length-1].n))+'</b><span>'+esc(t('view'))+'</span>';
 }
 function heroGo(i){
   var card = document.getElementById('heroCard'); if(!card) return;
@@ -659,8 +665,7 @@ function renderHome(){
   // categories
   h += '<section class="sec" id="cats"><div class="wrap"><div class="sec-head reveal"><div><h2>'+esc(t('catTitle'))+'</h2><p class="lead">'+esc(t('catLead'))+'</p></div><a class="textlink" href="#/catalog">'+esc(t('allCatalog'))+'</a></div>' +
     '<div class="cats reveal">' +
-    (CAT ? CAT.map(function(c, i){ return '<a class="cat'+(i===0?' big':'')+'" href="#/catalog/'+i+'"><img loading="lazy" src="'+esc(nodeImg(c))+'" alt=""><div class="lbl">'+esc(nm(c))+'<span>'+esc(t('items')(count(c)))+'</span></div></a>'; }).join('') +
-      '<a class="cat" href="#/catalog" style="display:grid;place-items:center;text-align:center;padding:20px;aspect-ratio:auto;min-height:100%"><div><div style="font-family:var(--serif);font-size:26px;line-height:1.15">'+esc(t('allCatalog'))+'</div><div style="color:var(--muted);font-size:14px;margin-top:6px">'+esc(t('allCatalogS'))+'</div></div></a>' : '') +
+    (CAT ? CAT.map(function(c, i){ return '<a class="cat" href="#/catalog/'+i+'"><img loading="lazy" src="'+esc(nodeImg(c))+'" alt=""><div class="lbl">'+esc(nm(c))+'<span>'+esc(t('items')(count(c)))+'</span></div></a>'; }).join('') : '') +
     '</div></div></section>';
 
   // why
@@ -693,7 +698,7 @@ function renderHome(){
   h += '<section class="sec" id="where"><div class="wrap"><div class="sec-head reveal"><div><h2>'+esc(t('where'))+'</h2><p class="lead">'+esc(t('whereLead'))+'</p></div></div><div class="where reveal"><div class="map" id="map"></div><div class="stores" id="stores"></div></div></div></section>';
 
   // contacts
-  h += '<section class="sec" id="contacts"><div class="wrap contact"><div class="reveal"><h2>'+esc(t('contacts'))+'</h2><p class="lead">'+esc(t('contactsLead'))+'</p><div class="clist">' +
+  h += '<section class="contact-sec" id="contacts"><div class="wrap contact"><div class="reveal"><h2>'+esc(t('contacts'))+'</h2><p class="lead">'+esc(t('contactsLead'))+'</p><div class="clist">' +
     PHONES.map(function(p){ return '<a href="'+tel(p)+'">'+I.phone+'<span>'+esc(p)+'</span></a>'; }).join('') +
     '<a href="'+TG_ADMIN+'" target="_blank" rel="noopener">'+I.send+'<span>'+esc(t('tgAdmin'))+'<small>@kukmara_admin</small></span></a>' +
     '<a href="'+TG_CH+'" target="_blank" rel="noopener">'+I.send+'<span>'+esc(t('tgChannel'))+'<small>'+esc(t('tgS'))+'</small></span></a>' +
