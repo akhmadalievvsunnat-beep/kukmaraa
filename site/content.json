@@ -1,13 +1,28 @@
 {
   "stores": [
     {
-      "city": {"uz": "Toshkent", "ru": "Ташкент", "en": "Tashkent"},
-      "name": {"uz": "Kukmara do‘koni", "ru": "Магазин Kukmara", "en": "Kukmara store"},
-      "address": {"uz": "Furqat ko‘chasi, 3A", "ru": "улица Фуркат, 3А", "en": "3A Furqat street"},
+      "city": {
+        "uz": "Toshkent",
+        "ru": "Ташкент",
+        "en": "Tashkent"
+      },
+      "name": {
+        "uz": "Kukmara do‘koni",
+        "ru": "Магазин Kukmara",
+        "en": "Kukmara store"
+      },
+      "address": {
+        "uz": "Shayxontohur tumani, Furqat ko‘chasi, 3A",
+        "ru": "Шайхантахурский район, улица Фуркат, 3А",
+        "en": "Shaykhontohur district, 3A Furqat street"
+      },
       "hours": null,
-      "phones": ["+998 95 650 22 22", "+998 95 514 22 22"],
+      "phones": [
+        "+998 95 650 22 22",
+        "+998 95 514 22 22"
+      ],
       "route": "https://yandex.uz/maps/-/CTxB5PZH",
-      "mapQuery": "Ташкент, улица Фуркат, 3А"
+      "mapQuery": "Ташкент, Шайхантахурский район, улица Фурката, 3А"
     }
   ],
   "promos": [],
@@ -15,15 +30,31 @@
     {
       "date": "2026-10-07",
       "img": "https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/cover_tr_skovorodki.jpg",
-      "title": {"uz": "Trendy Style rangli kolleksiyasi katalogda", "ru": "Цветная коллекция Trendy Style в каталоге", "en": "Trendy Style colour collection is in the catalogue"},
-      "text": {"uz": "Skovorodkalar, blinnitsalar, kovshlar va kostryulkalar — yorqin ranglarda, granit qoplama bilan.", "ru": "Сковороды, блинницы, ковши и кастрюли — в ярких цветах, с гранитным покрытием.", "en": "Frying pans, crepe pans, saucepans and pots in bright colours with a granite coating."},
+      "title": {
+        "uz": "Trendy Style rangli kolleksiyasi katalogda",
+        "ru": "Цветная коллекция Trendy Style в каталоге",
+        "en": "Trendy Style colour collection is in the catalogue"
+      },
+      "text": {
+        "uz": "Skovorodkalar, blinnitsalar, kovshlar va kostryulkalar — yorqin ranglarda, granit qoplama bilan.",
+        "ru": "Сковороды, блинницы, ковши и кастрюли — в ярких цветах, с гранитным покрытием.",
+        "en": "Frying pans, crepe pans, saucepans and pots in bright colours with a granite coating."
+      },
       "link": "#/catalog/0.2"
     },
     {
       "date": "2026-10-07",
       "img": "https://raw.githubusercontent.com/akhmadalievvsunnat-beep/kukmaraa/main/images/cover_mr_nabor.jpg",
-      "title": {"uz": "Butun katalog endi saytda", "ru": "Весь каталог теперь на сайте", "en": "The full catalogue is now online"},
-      "text": {"uz": "700 dan ortiq mahsulot: artikul yoki nom bo‘yicha qidiring va narxini bir bosishda so‘rang.", "ru": "Более 700 товаров: ищите по артикулу или названию и узнавайте цену в один клик.", "en": "Over 700 products: search by article or name and ask for a price in one tap."},
+      "title": {
+        "uz": "Butun katalog endi saytda",
+        "ru": "Весь каталог теперь на сайте",
+        "en": "The full catalogue is now online"
+      },
+      "text": {
+        "uz": "700 dan ortiq mahsulot: artikul yoki nom bo‘yicha qidiring va narxini bir bosishda so‘rang.",
+        "ru": "Более 700 товаров: ищите по артикулу или названию и узнавайте цену в один клик.",
+        "en": "Over 700 products: search by article or name and ask for a price in one tap."
+      },
       "link": "#/catalog"
     }
   ]
